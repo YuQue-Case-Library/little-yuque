@@ -1,0 +1,54 @@
+.h1 {
+  margin-bottom: 0rpx;
+  font-size: 68rpx;
+  color: #262626;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.h2 {
+  margin-bottom: 0rpx;
+  font-size: 56rpx;
+  color: #262626;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.h3 {
+  margin-bottom: 0rpx;
+  font-size: 36rpx;
+  color: #262626;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.input {
+  font-family: Chinese Quote,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-variant: tabular-nums;
+  box-sizing: border-box;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  display: inline-block;
+  padding: 8rpx 22rpx;
+  width: 100%;
+  height: 80rpx;
+  font-size: 28rpx;
+  line-height: 1.5;
+  color: #595959;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  transition: all .3s;
+}
