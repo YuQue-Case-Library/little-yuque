@@ -1,0 +1,66 @@
+@import "/static/style/common.wxss";
+
+.container {
+  padding: 112rpx 16rpx 144rpx;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 64rpx;
+}
+
+.header .logo {
+  margin-bottom: 48rpx;
+  width: 112rpx;
+  height: 112rpx;
+}
+
+.body {
+  width: 96%;
+}
+
+.body .form-item {
+  margin-bottom: 32rpx;
+  width: 100%;
+  font-size: 0;
+}
+
+.input-prefix {
+  padding: 16rpx 22rpx;
+  font-size: 32rpx;
+  height: 100%;
+  border:1px solid #d9d9d9;
+  background: #fff;
+}
+
+.vercode {
+  margin-left: 16rpx;
+  font-size: 28rpx;
+  letter-spacing: 0;
+  min-width: 208rpx;
+  border-radius: 4px;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 30rpx;
+  color: #595959;
+}
+
+.register-tip {
+  margin-top: 48rpx;
+}
+
+.third-login {
+  margin-top: 64rpx;
+  padding-top: 32rpx;
+  border-top: 1px solid #e8e8e8;
+}
+
+.third-login .dingTalk {
+  
+}
+
+.third-login .toLogin {
+
+}

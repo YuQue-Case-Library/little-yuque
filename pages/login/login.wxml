@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="header">
+    <image class="logo" src="/static/images/logo-s.svg" />
+    <text class="h2">欢迎回到语雀</text>
+    <text class="">写文档，就用语雀</text>
+  </view>
+  <view class="body">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="form-item">
+        <input class="input" name="username" placeholder="手机号/邮箱" />
+      </view>
+      <view class="form-item">
+        <input class="input" password="true" name="password" placeholder="密码" />
+      </view>
+      <view class="form-item">
+        <button type="primary" formType="submit">登录</button>
+      </view>
+    </form>
+    <view class="third-login">
+      <text class="dingTalk">钉钉</text>
+      <text class="toLogin">免费注册</text>
+    </view>
+  </view>
+  <view class="footer"></view>
+</view>
