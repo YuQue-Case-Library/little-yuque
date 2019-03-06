@@ -1,0 +1,21 @@
+/**app.wxss**/
+::-webkit-scrollbar {
+  display: none;
+}
+page {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'PingFang SC, Monospaced Number, Chinese Quote, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif';
+  font-size: 28rpx;
+  background: #fafafa;
+  scroll-behavior: smooth;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: #fff;
+} 
