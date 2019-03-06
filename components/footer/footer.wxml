@@ -1,0 +1,7 @@
+<view class="container">
+  <view class="footer">
+    <navigator class="text" hover-class="none" url="/pages/login/login">桌面版本</navigator>
+    <navigator class="text" hover-class="none" url="/pages/login/login">English</navigator>
+    <navigator class="text" hover-class="none" url="/pages/login/login">帮助中心</navigator>
+  </view>
+</view>

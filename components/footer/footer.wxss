@@ -1,0 +1,17 @@
+@import "/static/style/common.wxss";
+
+.container {
+  background: #F8F8F8;
+  width: 750rpx;
+}
+
+.container .footer {
+  display: flex;
+  padding: 32rpx;
+  font-size: 30rpx;
+}
+
+.container .footer .text {
+  margin-right: 48rpx;
+  color: #8c8c8c;
+}
