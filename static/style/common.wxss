@@ -52,3 +52,7 @@
   border-radius: 4px;
   transition: all .3s;
 }
+
+navigator {
+  color: #096dd9;
+}
