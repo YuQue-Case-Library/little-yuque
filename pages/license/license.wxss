@@ -1,0 +1,27 @@
+@import "/static/style/common.wxss";
+
+.container {
+
+}
+
+.license {
+  padding: 0 32rpx 48rpx;
+  line-height: 2;
+  color: #595959;
+}
+
+.license .title {
+  padding: 104rpx 0; 
+  text-align: center;
+}
+
+.license .license-item {
+  margin-top: 48rpx;
+}
+
+.license-item .license-item-title {
+  margin-bottom: 48rpx;
+  color: #262626;
+  font-size: 36rpx;
+  font-weight: bolder;
+}

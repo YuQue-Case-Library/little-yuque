@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "服务协议 · 语雀",
+  "usingComponents": {
+    "header": "../../components/header/header",
+    "footer": "../../components/footer/footer"
+  }
+}
