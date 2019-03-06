@@ -32,7 +32,13 @@
   font-size: 32rpx;
   height: 100%;
   border:1px solid #d9d9d9;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
   background: #fff;
+}
+
+.input-mobile {
+  border-radius: 0 4px 4px 0;
 }
 
 .vercode {
@@ -48,19 +54,30 @@
 }
 
 .register-tip {
+  display: flex;
+  justify-content: center;
   margin-top: 48rpx;
 }
 
 .third-login {
+  display: flex;
   margin-top: 64rpx;
   padding-top: 32rpx;
   border-top: 1px solid #e8e8e8;
 }
 
-.third-login .dingTalk {
-  
+.third-login .ding-talk {
+  display: flex;
+  margin-right: 84rpx;
 }
 
-.third-login .toLogin {
+.third-login .ding-talk .logo {
+    margin-right: 8rpx;
+    width: 40rpx;
+    height: 42rpx;
+    vertical-align: middle;
+}
+
+.third-login .to-login {
 
 }
