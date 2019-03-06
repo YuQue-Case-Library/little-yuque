@@ -1,0 +1,83 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="flex header">
+    <icon type="success" size="24" />
+    <image class="header-center" src="/static/images/logo.svg" /> 
+    <view class="flex header-right">
+      <navigator class="text" hover-class="none" url="/pages/login/login">登录</navigator>
+      <navigator class="text" hover-class="none" url="/pages/register/register">注册</navigator>
+    </view>
+  </view>
+
+  <view class="body">
+    <view class="join-section">
+      <view class="flex join-wrapper">
+        <text class="h1">写文档，就用语雀</text>
+        <text class="desc">优雅高效的在线文档编辑与协同工具</text>
+        <text class="desc">让每个企业轻松拥有文档中心</text>
+        <text class="desc">阿里巴巴集团内部使用多年，众多中小企业首选</text>
+        <navigator class="text" hover-class="none" url="/pages/register/register">
+          <button class="join-btn" type="primary">加入语雀</button>
+        </navigator>
+      </view>
+      <view>
+        <image src="/static/images/jxncnQDqKKpHVizaZvHM.png" />
+      </view>
+    </view>
+
+    <view class="feature-section">
+      <image class="feature-top-bg" mode="scaleToFill" src="/static/images/EqAYZorzzLmJAXueeLHy.svg" />
+      <view class="feature-wrapper">
+        <view class="flex feature-item">
+          <image class="item-img" mode="aspectFit" src="/static/images/rjmsOmsQUvFqrTBaLawk.svg" />
+          <text class="h3">在线文档编辑，团队协同首选</text>
+          <text class="desc">主流 Office 文件全兼容</text>
+          <text class="desc">多人协同，轻松拥有团队知识库</text>
+        </view>
+        <view class="flex feature-item">
+          <image class="item-img" mode="aspectFit" src="/static/images/zTDQhJccaMTPDulsvmxN.svg" />
+          <text class="h3">在线文档编辑，团队协同首选</text>
+          <text class="desc">主流 Office 文件全兼容</text>
+          <text class="desc">多人协同，轻松拥有团队知识库</text>
+        </view>
+        <view class="flex feature-item">
+          <image class="item-img" mode="aspectFit" src="/static/images/tEhNpxdMlcUwlqAlWqVc.svg" />
+          <text class="h3">在线文档编辑，团队协同首选</text>
+          <text class="desc">主流 Office 文件全兼容</text>
+          <text class="desc">多人协同，轻松拥有团队知识库</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="enterprise-section">
+      <view class="flex enterprise-wrapper">
+        <text class="h1">企业空间</text>
+        <text class="desc">一键导入企业员工，立刻拥有专属文档中心</text>
+        <text class="desc">独立域名访问，安全私密</text>
+        <text class="desc">语雀，让知识等于财富</text>
+      </view>
+      <view class="know-more text-center">
+        <text>了解更多</text>
+        <image class="more-enter" mode="aspectFit" src="/static/images/enter.svg" />
+      </view>
+      <image class="enterprise-img" src="/static/images/EJLpAWuHkwEgnHjtSEgI.png" />
+    </view>
+
+    <view class="inuse-section">
+      <view class="flex inuse-wrapper">
+        <text class="h2">为中小企业量身定做</text>
+        <text class="desc text-center">阿里巴巴集团内部使用多年，众多中小企业首选，可靠的基础能力，灵活的定制化用法</text>
+        <view class="flex inuse-logo">
+          <image class="inuse-img" mode="aspectFit" src="/static/images/alibaba-logo.svg" />
+          <image class="inuse-img" mode="aspectFit" src="/static/images/ant-logo.svg" />
+          <image class="inuse-img" mode="aspectFit" src="/static/images/cainiao-logo.svg" />
+          <image class="inuse-img" mode="aspectFit" src="/static/images/hema-logo.svg" />
+          <image class="inuse-img" mode="aspectFit" src="/static/images/ding-logo.svg" />
+          <image class="inuse-img" mode="aspectFit" src="/static/images/amap-logo.svg" />
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <footer />
+</view>

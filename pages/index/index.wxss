@@ -1,0 +1,139 @@
+@import "/static/style/common.wxss";
+
+.h1 {
+  margin-bottom: 40rpx;
+}
+
+.h2 {
+  margin-bottom: 32rpx;
+}
+
+.h3 {
+  margin-bottom: 40rpx;
+}
+
+.desc {
+  font-size: 32rpx;
+}
+
+.header {
+  box-sizing: border-box;
+  padding-left: 24rpx;
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.header .header-center {
+  width: 160rpx;
+  height: 64rpx;
+}
+
+.header .header-right .text {
+  margin-right: 16rpx;
+  font-size: 24rpx;
+  color: #595959;
+  white-space: nowrap;
+}
+
+.body {
+  width: 100%;
+}
+
+.body .join-section {
+  padding: 116rpx 32rpx 184rpx;
+}
+
+.join-wrapper {
+  flex-direction: column;
+  padding: 136rpx 0;
+  margin-bottom: 160rpx; 
+}
+
+.join-wrapper .join-btn {
+  margin-top: 80rpx;
+  width: 288rpx;
+  height: 96rpx;
+}
+
+.feature-section {
+  padding-bottom: 232rpx;
+  background-color: #fafbfc;
+}
+
+.feature-section .feature-top-bg {
+  width: 100%;
+  height: 48rpx;
+}
+
+.feature-section .feature-wrapper {
+  padding: 0 32rpx;
+}
+
+.feature-section .feature-wrapper .feature-item {
+  flex-direction: column;
+  margin-top: 160rpx;
+}
+
+.feature-item .item-img {
+  margin-bottom: 128rpx;
+  width: 100%;
+  height: 102px;
+}
+
+.enterprise-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 128rpx 32rpx 154rpx;
+  background-color: #f7f9fa;
+}
+
+.enterprise-section .enterprise-wrapper {
+  flex-direction: column;
+}
+
+.enterprise-section .know-more {
+  margin: 80rpx 0 178rpx;
+  display: flex;
+  align-items:center;
+}
+
+.enterprise-section .know-more .more-enter {
+  margin-left: 16rpx;
+  width: 32rpx;
+  height: 28rpx;
+}
+
+.enterprise-section .enterprise-img {
+  width: 100%;
+}
+
+.inuse-section {
+  padding: 152rpx 0 192rpx;
+}
+
+.inuse-section .inuse-wrapper {
+  flex-direction: column;
+  padding: 0 32rpx;
+}
+
+.inuse-section .inuse-wrapper .desc {
+  color: #595959;
+}
+
+.inuse-section .inuse-logo {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 64rpx;
+  width: 100%;
+}
+
+.inuse-section .inuse-logo .inuse-img {
+  margin-top: 64rpx;
+  padding: 0 16rpx;
+  box-sizing: border-box;
+  width: 50%;
+  height: 72rpx;
+}
