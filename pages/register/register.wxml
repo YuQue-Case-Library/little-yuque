@@ -21,7 +21,7 @@
         <button class="vercode" disabled="{{isVercodeLimit}}" bindtap="getVercode">{{vercodeText}}</button>
       </view>
       <view class="form-item">
-        <button type="primary">注册语雀</button>
+        <button type="primary" bindtap="handleRegister">注册语雀</button>
       </view>
     </form>
     <view class="register-tip">
