@@ -2,6 +2,7 @@
 
 .container {
   padding: 112rpx 16rpx 144rpx;
+  height: 100vh;
 }
 
 .header {
@@ -51,6 +52,11 @@
   line-height: 80rpx;
   padding: 0 30rpx;
   color: #595959;
+}
+
+.send-message {
+  margin-bottom: 32rpx;
+  color: #8c8c8c;
 }
 
 .register-tip {

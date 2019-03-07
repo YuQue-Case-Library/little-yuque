@@ -10,6 +10,8 @@ Page({
     vercode: '',
     vercodeText: '获取验证码',
     isVercodeLimit: false,
+    vercodeFocus: false,
+    sendCodeMessage: '',
   },
   onLoad:function(options){
     // 生命周期函数--监听页面加载
@@ -53,7 +55,11 @@ Page({
         sixCodeRandom = getSixCodeRandom();
         const timer = setTimeout(() => {
           clearTimeout(timer);
-          this.showToast(`获取验证成功，您获取的验证码是 ${vercode}`, 4000);
+
+          this.setData({
+            sendCodeMessage: `获取验证成功，您获取的验证码是 ${sixCodeRandom}`,
+            vercodeFocus: true
+          });
 
           countdown({
             count: resetTime,
@@ -67,7 +73,7 @@ Page({
             finishCallback: () => {
               this.setData({
                 isVercodeLimit: false,
-                vercodeText: '获取验证码'
+                vercodeText: '重发验证码'
               });
             }
           });
