@@ -16,7 +16,7 @@ const formatNumber = n => {
 }
 
 // 随机生成 6 位验证码信息
-const getSixCodeRandom = () => Math.floor(Math.random() * 900000 + 100000);
+const getSixCodeRandom = () => `${Math.floor(Math.random() * 900000 + 100000)}`;
 
 // 倒计时
 const countdown = ({ count, rate, callback, finishCallback }) => {
