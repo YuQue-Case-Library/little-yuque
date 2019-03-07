@@ -8,11 +8,17 @@
     <form bindsubmit="formSubmit" bindreset="formReset">
       <view class="flex form-item">
         <text class="input-prefix">+86</text>
-        <input class="input input-mobile" name="input" placeholder="仅支持中国大陆手机号码" />
+        <input
+          class="input input-mobile"
+          name="input"
+          auto-focus
+          placeholder="仅支持中国大陆手机号码"
+          bindinput="bindMobileInput"
+        />
       </view>
       <view class="flex form-item">
         <input class="input" name="input" placeholder="6 位验证码" />
-        <button class="vercode">获取验证码</button>
+        <button class="vercode" disabled="{{isVercodeLimit}}" bindtap="getVercode">{{vercodeText}}</button>
       </view>
       <view class="form-item">
         <button type="primary">注册语雀</button>

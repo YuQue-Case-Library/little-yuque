@@ -1,5 +1,15 @@
+const { MOBILE_REG } = require('../../utils/constants.js');
+const { getSixCodeRandom, countdown } = require('../../utils/util.js');
+
+const resetTime = 60;
+let sixCodeRandom = '';
+
 Page({
   data:{
+    mobile: '',
+    vercode: '',
+    vercodeText: '获取验证码',
+    isVercodeLimit: false,
   },
   onLoad:function(options){
     // 生命周期函数--监听页面加载
@@ -22,12 +32,56 @@ Page({
   onReachBottom: function() {
     // 页面上拉触底事件的处理函数
   },
-  onShareAppMessage: function() {
-    // 用户点击右上角分享
-    return {
-      title: 'title', // 分享标题
-      desc: 'desc', // 分享描述
-      path: 'path' // 分享路径
+
+  // 监听手机输入框事件
+  bindMobileInput(e) {
+    this.setData({
+      mobile: e.detail.value
+    });
+  },
+
+  // 获取验证码
+  getVercode() {
+    const { mobile, isVercodeLimit } = this.data;
+
+    if (!isVercodeLimit) {
+      if (!mobile) {
+        this.showToast('请输入手机号');
+      } else if (!MOBILE_REG.test(mobile)) {
+        this.showToast('请输入合法的手机号');
+      } else {
+        sixCodeRandom = getSixCodeRandom();
+        const timer = setTimeout(() => {
+          clearTimeout(timer);
+          this.showToast(`获取验证成功，您获取的验证码是 ${vercode}`, 4000);
+
+          countdown({
+            count: resetTime,
+            rate: 1000,
+            callback: currentTime => {
+              this.setData({
+                isVercodeLimit: true,
+                vercodeText: `${currentTime}s`
+              });
+            },
+            finishCallback: () => {
+              this.setData({
+                isVercodeLimit: false,
+                vercodeText: '获取验证码'
+              });
+            }
+          });
+        }, 800);
+      }
     }
+  },
+
+  // 显示提示信息
+  showToast(title, duration = 2000) {
+    wx.showToast({
+      title,
+      icon: 'none',
+      duration
+    });
   }
 })
