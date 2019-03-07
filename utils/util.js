@@ -15,6 +15,25 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+// 随机生成 6 位验证码信息
+const getSixCodeRandom = () => Math.floor(Math.random() * 900000 + 100000);
+
+// 倒计时
+const countdown = ({ count, rate, callback, finishCallback }) => {
+  let current = count;
+  const timer = setInterval(() => {
+    if (current > 1) {
+      --current;
+      callback && callback(current);
+    } else {
+      clearInterval(timer);
+      finishCallback && finishCallback(count);
+    }
+  }, rate)
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime,
+  getSixCodeRandom,
+  countdown
 }
