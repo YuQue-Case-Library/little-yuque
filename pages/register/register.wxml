@@ -2,7 +2,7 @@
   <view class="header">
     <image class="logo" src="/static/images/logo-s.svg" />
     <text class="h2">欢迎加入语雀</text>
-    <text class="">写文档，就用语雀</text>
+    <text>写文档，就用语雀</text>
   </view>
   <view class="body">
     <form bindsubmit="formSubmit" bindreset="formReset">
@@ -17,8 +17,8 @@
         />
       </view>
       <view class="flex form-item">
-        <input class="input" name="input" focus="{{vercodeFocus}}" placeholder="6 位验证码" />
-        <button class="vercode" disabled="{{isVercodeLimit}}" bindtap="getVercode">{{vercodeText}}</button>
+        <input class="input" name="input" focus="{{codeInputFocus}}" placeholder="6 位验证码" />
+        <button class="verCode" disabled="{{isCodeLimit}}" bindtap="getVerCode">{{codeBtnText}}</button>
       </view>
       <view class="send-message" wx:if="{{sendCodeMessage}}">{{sendCodeMessage}}</view>
       <view class="form-item">
