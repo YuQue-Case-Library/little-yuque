@@ -2,7 +2,7 @@
   <view class="header">
     <image class="logo" src="/static/images/logo-s.svg" />
     <text class="h2">欢迎加入语雀</text>
-    <text>写文档，就用语雀</text>
+    <text class="logo-tip">写文档，就用语雀</text>
   </view>
   <view class="body">
     <form bindsubmit="formSubmit" bindreset="formReset">
@@ -18,7 +18,7 @@
       </view>
       <view class="flex form-item">
         <input class="input" name="input" focus="{{codeInputFocus}}" placeholder="6 位验证码" />
-        <button class="verCode" disabled="{{isCodeLimit}}" bindtap="getVerCode">{{codeBtnText}}</button>
+        <button class="vercode" disabled="{{isCodeLimit}}" bindtap="getVerCode">{{codeBtnText}}</button>
       </view>
       <view class="send-message" wx:if="{{sendCodeMessage}}">{{sendCodeMessage}}</view>
       <view class="form-item">
@@ -26,16 +26,10 @@
       </view>
     </form>
     <view class="register-tip">
-      <text>点击“注册”，即代表你同意</text>
+      <text>点击“注册语雀”，即代表你同意</text>
       <navigator class="text" hover-class="none" url="/pages/login/login">《语雀服务协议》</navigator>
     </view>
-    <view class="third-login">
-      <view class="ding-talk">
-        <image class="logo" mode="top" src="/static/images/iSBYXPhvTkwhjYUQVMLG.png" />
-        <navigator hover-class="none" url="/pages/login/login">钉钉</navigator>
-      </view>
-      <navigator class="to-login" hover-class="none" url="/pages/login/login">直接登录</navigator>
-    </view>
+    <third-login />
   </view>
   <view class="footer"></view>
 </view>
