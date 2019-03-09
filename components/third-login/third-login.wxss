@@ -1,0 +1,28 @@
+@import "/static/style/common.wxss";
+
+.container {
+  width: 750rpx;
+}
+
+.third-login {
+  display: flex;
+  margin-top: 64rpx;
+  padding-top: 32rpx;
+  border-top: 1px solid #e8e8e8;
+}
+
+.third-login .ding-talk {
+  display: flex;
+  margin-right: 84rpx;
+}
+
+.third-login .ding-talk .logo {
+    margin-right: 8rpx;
+    width: 40rpx;
+    height: 42rpx;
+    vertical-align: middle;
+}
+
+.third-login .to-login {
+
+}

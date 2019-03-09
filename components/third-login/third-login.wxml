@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="third-login">
+    <view class="ding-talk">
+      <image class="logo" mode="top" src="/static/images/iSBYXPhvTkwhjYUQVMLG.png" />
+      <navigator hover-class="none" url="/pages/login/login">钉钉</navigator>
+    </view>
+    <navigator class="to-login" hover-class="none" url="/pages/login/login">直接登录</navigator>
+  </view>
+</view>
