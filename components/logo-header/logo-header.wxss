@@ -1,0 +1,19 @@
+@import "/static/style/common.wxss";
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 64rpx;
+}
+
+.header .logo {
+  margin-bottom: 48rpx;
+  width: 112rpx;
+  height: 112rpx;
+}
+
+.header .logo-tip {
+  margin-top: 24rpx;
+  color: #595959;
+}
