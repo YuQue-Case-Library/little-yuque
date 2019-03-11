@@ -1,31 +1,19 @@
 <view class="container">
-  <logo-header />
-  <view class="body">
-    <form bindsubmit="formSubmit" bindreset="formReset">
-      <view class="flex form-item">
-        <text class="input-prefix">+86</text>
-        <input
-          class="input input-mobile"
-          name="input"
-          focus
-          placeholder="仅支持中国大陆手机号码"
-          bindinput="bindMobileInput"
-        />
+  <view class="register">
+    <logo-header />
+    <view class="body">
+      <form bindsubmit="formSubmit" bindreset="formReset">
+        <code-login />
+        <view class="form-item">
+          <button type="primary" bindtap="handleRegister">注册语雀</button>
+        </view>
+      </form>
+      <view class="register-tip">
+        <text>点击“注册语雀”，即代表你同意</text>
+        <navigator class="text" hover-class="none" url="/pages/login/login">《语雀服务协议》</navigator>
       </view>
-      <view class="flex form-item">
-        <input class="input" name="input" focus="{{codeInputFocus}}" placeholder="6 位验证码" />
-        <button class="vercode" disabled="{{isCodeLimit}}" bindtap="getVerCode">{{codeBtnText}}</button>
-      </view>
-      <view class="send-message" wx:if="{{sendCodeMessage}}">{{sendCodeMessage}}</view>
-      <view class="form-item">
-        <button type="primary" bindtap="handleRegister">注册语雀</button>
-      </view>
-    </form>
-    <view class="register-tip">
-      <text>点击“注册语雀”，即代表你同意</text>
-      <navigator class="text" hover-class="none" url="/pages/login/login">《语雀服务协议》</navigator>
+      <third-login />
     </view>
-    <third-login />
   </view>
-  <view class="footer"></view>
+  <footer />
 </view>
