@@ -17,12 +17,8 @@
 }
 
 .third-login .ding-talk .logo {
-    margin-right: 8rpx;
+    margin-right: 16rpx;
     width: 40rpx;
     height: 42rpx;
     vertical-align: middle;
-}
-
-.third-login .to-login {
-
 }
