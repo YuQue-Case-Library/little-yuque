@@ -1,11 +1,15 @@
 @import "/static/style/common.wxss";
 
 .container {
+}
+
+.login {
   padding: 112rpx 16rpx 144rpx;
 }
 
 .body {
-  width: 96%;
+  margin: 0 auto;
+  width: 92%;
 }
 
 .body .form-item {
@@ -14,22 +18,40 @@
   font-size: 0;
 }
 
-.input-prefix {
-  padding: 16rpx 22rpx;
-  font-size: 32rpx;
-  height: 100%;
-  border:1px solid #d9d9d9;
-  background: #fff;
+.body .form-item.form-item-button {
+  margin-bottom: 0;
 }
 
-.vercode {
-  margin-left: 16rpx;
-  font-size: 28rpx;
-  letter-spacing: 0;
-  min-width: 208rpx;
+.psw-wrapper {
+  display: flex;
   border-radius: 4px;
+  border:1px solid #d9d9d9;
+}
+
+.psw-wrapper .input {
+  flex: 3;
+  border: none; 
+}
+
+.input-prefix {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.prefix-link {
+  vertical-align: middle;
+  padding-left: 30rpx; 
+  padding-right: 24rpx; 
+  color: #8c8c8c;
+  font-size: 28rpx;
+  border-left: 1px solid #d9d9d9;
+}
+
+.switch-logo {
   height: 80rpx;
   line-height: 80rpx;
-  padding: 0 30rpx;
-  color: #595959;
+  color: #8c8c8c;
 }
