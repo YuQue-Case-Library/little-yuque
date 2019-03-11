@@ -1,3 +1,7 @@
 {
-  "navigationBarTitleText": "登录 · 语雀"
+  "navigationBarTitleText": "登录 · 语雀",
+  "usingComponents": {
+    "third-login": "../../components/third-login/third-login",
+    "logo-header": "../../components/logo-header/logo-header"
+  }
 }

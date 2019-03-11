@@ -1,9 +1,5 @@
 <view class="container">
-  <view class="header">
-    <image class="logo" src="/static/images/logo-s.svg" />
-    <text class="h2">欢迎回到语雀</text>
-    <text class="">写文档，就用语雀</text>
-  </view>
+  <logo-header />
   <view class="body">
     <form bindsubmit="formSubmit" bindreset="formReset">
       <view class="form-item">
@@ -16,10 +12,7 @@
         <button type="primary" formType="submit">登录</button>
       </view>
     </form>
-    <view class="third-login">
-      <text class="dingTalk">钉钉</text>
-      <text class="toLogin">免费注册</text>
-    </view>
+    <third-login />
   </view>
   <view class="footer"></view>
 </view>
