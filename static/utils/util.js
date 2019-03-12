@@ -32,8 +32,18 @@ const countdown = ({ count, rate, callback, finishCallback }) => {
   }, rate)
 }
 
+// 显示提示信息
+const showSimpleToast = (title, duration = 2000) => {
+  wx.showToast({
+    title,
+    icon: 'none',
+    duration
+  });
+}
+
 module.exports = {
   formatTime,
   getSixCodeRandom,
-  countdown
+  countdown,
+  showSimpleToast
 }
