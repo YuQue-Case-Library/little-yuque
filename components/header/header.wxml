@@ -1,6 +1,8 @@
 <view class="container">
   <view class="flex header">
-    <icon type="success" size="24" />
+    <view class="btn-burger">
+      <text class="larkicon larkicon-toc"></text>
+    </view>
     <image class="header-center" src="/static/images/logo.svg" /> 
     <view class="flex header-right">
       <navigator class="text" hover-class="none" url="/pages/login/login">登录</navigator>

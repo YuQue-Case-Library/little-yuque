@@ -12,6 +12,11 @@
   border-bottom: 1px solid #e8e8e8;
 }
 
+.header .btn-burger {
+  padding: 14rpx;
+  font-size: 48rpx;
+}
+
 .header .header-center {
   width: 160rpx;
   height: 64rpx;
