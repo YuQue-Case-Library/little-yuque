@@ -1,5 +1,14 @@
 @import "/static/style/common.wxss";
 
+.container {
+  
+}
+
+.container.unscroll{
+  overflow: hidden;
+  position: fixed;
+}
+
 .h1 {
   margin-bottom: 40rpx;
 }

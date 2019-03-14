@@ -10,7 +10,8 @@ Page({
     canIUse: wx.canIUse("button.open-type.getUserInfo"),
     latitude: "",
     longitude: "",
-    markers: []
+    markers: [],
+    isUnscroll: false,
   },
 
   onLoad: function() {
@@ -60,6 +61,14 @@ Page({
       });
     }
   },
+
+  // 处理 header 组件的展开导致的禁止或启用滑动
+  handleUnscroll({ detail }) {
+    this.setData({
+      isUnscroll: detail
+    })
+  },
+
   // 获取用户信息
   getUserInfo(e) {
     console.log(e);
@@ -87,12 +96,12 @@ Page({
 
   // 获取用户所在地的天气信息
   getUserWeatherInfo(params) {
-    wx.request({
-      url: "https://www.yuque.com/api/groups/114852/books?offset=0&q=&type=",
-      success(res) {
-        console.log(res);
-      }
-    });
+    // wx.request({
+    //   url: "https://www.yuque.com/api/groups/114852/books?offset=0&q=&type=",
+    //   success(res) {
+    //     console.log(res);
+    //   }
+    // });
   },
 
   // 点击去注册

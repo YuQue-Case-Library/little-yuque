@@ -1,6 +1,6 @@
 <!-- index.wxml -->
-<view class="container">
-  <header />
+<view class="container {{isUnscroll ? 'unscroll' : ''}}">
+  <header bind:scrollEvent="handleUnscroll" />
   <view class="body">
     <view class="join-section">
       <view class="flex join-wrapper">
