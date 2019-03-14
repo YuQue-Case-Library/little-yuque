@@ -1,0 +1,16 @@
+<view class="index-dropmenu">
+  <view class="mask {{isExpand ? 'show' : ''}}"></view>
+  <view class="dropmenu {{isExpand ? 'show' : ''}}">
+    <view class="search">
+      <view class="search-wrapper">
+        <view class="input-prefix"></view>
+        <input class="input" type="text" placeholder="搜索" />
+      </view>
+    </view>
+    <view class="menu">
+      <navigator class="menu-item">企业空间</navigator>
+      <navigator class="menu-item">定价</navigator>
+      <navigator class="menu-item">帮助</navigator>
+    </view>
+  </view>
+</view>
