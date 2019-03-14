@@ -1,7 +1,7 @@
 <view class="container">
   <view class="flex header">
-    <view class="btn-burger">
-      <text class="larkicon larkicon-toc"></text>
+    <view class="btn-burger" bindtap="handleExpand">
+      <text class="larkicon {{isExpand ? 'larkicon-close' : 'larkicon-toc'}}"></text>
     </view>
     <image class="header-center" src="/static/images/logo.svg" /> 
     <view class="flex header-right">
@@ -9,4 +9,5 @@
       <navigator class="text" hover-class="none" url="/pages/register/register">注册</navigator>
     </view>
   </view>
+  <index-dropmenu is-expand="{{isExpand}}"/>
 </view>
