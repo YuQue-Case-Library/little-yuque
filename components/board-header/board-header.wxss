@@ -1,0 +1,60 @@
+@import "/static/style/common.wxss";
+
+.container {
+  width: 750rpx;
+}
+
+.header {
+  box-sizing: border-box;
+  padding: 0 24rpx;
+  z-index: 999;
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.header .btn-burger {
+  padding: 14rpx 70rpx 14rpx 14rpx;
+  font-size: 48rpx;
+}
+
+.header .header-center {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #262626;
+}
+
+.header .header-right {
+  padding-right: 4rpx;
+}
+
+.header .header-right .text {
+  margin-right: 32rpx;
+  font-size: 24rpx;
+  color: #595959;
+  white-space: nowrap;
+}
+
+.mask {
+  position: absolute;
+  z-index: 998;
+  top: 100rpx;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.dropmenu {
+  position: fixed;
+  z-index: 998;
+  top: 65rpx;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  background-color: #fff;
+  transition: top .2s cubic-bezier(.645,.045,.355,1) .05s,opacity .15s cubic-bezier(.645,.045,.355,1) .05s;
+}
+
+.dropmenu .search {
+  padding: 32rpx 32rpx 8rpx;
+}

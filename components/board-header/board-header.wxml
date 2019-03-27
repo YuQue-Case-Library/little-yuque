@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="flex header">
+    <view class="btn-burger" bindtap="handleExpand">
+      <text class="m-larkicon {{isExpand ? 'm-larkicon-close' : 'm-larkicon-toc'}}"></text>
+    </view>
+    <view class="header-center">工作台</view>
+    <view class="flex header-right">
+      <navigator class="text" hover-class="none" url="">
+        <text class="larkicon larkicon-bell"></text>
+      </navigator>
+      <text class="larkicon larkicon-header-new"></text>
+    </view>
+  </view>
+  <board-dropmenu is-expand="{{isExpand}}" bind:close="handleDropmenuClose" />
+</view>
