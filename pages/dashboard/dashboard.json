@@ -1,1 +1,7 @@
-{}
+{
+  "navigationBarTitleText": "工作台",
+  "usingComponents": {
+    "board-header": "../../components/board-header/board-header",
+    "footer": "../../components/footer/footer"
+  }
+}
