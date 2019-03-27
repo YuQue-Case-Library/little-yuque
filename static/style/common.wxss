@@ -1,4 +1,5 @@
 @import "./font.wxss";
+@import "./m-font.wxss";
 
 .h1 {
   margin-bottom: 0rpx;

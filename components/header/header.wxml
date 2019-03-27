@@ -1,7 +1,7 @@
 <view class="container">
   <view class="flex header">
     <view class="btn-burger" bindtap="handleExpand">
-      <text class="larkicon {{isExpand ? 'larkicon-close' : 'larkicon-toc'}}"></text>
+      <text class="m-larkicon {{isExpand ? 'm-larkicon-close' : 'm-larkicon-toc'}}"></text>
     </view>
     <image class="header-center" src="/static/images/logo.svg" /> 
     <view class="flex header-right">
