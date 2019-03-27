@@ -1,0 +1,50 @@
+<view class="index-dropmenu">
+  <view class="mask {{isExpand ? 'show' : ''}}" bindtap="handleClose"></view>
+  <view class="dropmenu {{isExpand ? 'show' : ''}}">
+    <view class="search">
+      <view class="search-wrapper">
+        <view class="input-prefix"></view>
+        <input class="input" type="text" placeholder="搜索" />
+      </view>
+    </view>
+    <view class="menu">
+      <view class="menu-item">工作台</view>
+      <view class="board-menu">
+        <view class="board-menu-item active">
+          <navigator class="board-menu-item-text">首页</navigator>
+        </view>
+        <view class="board-menu-item">
+          <navigator class="board-menu-item-text">文档</navigator>
+        </view>
+        <view class="board-menu-item">
+          <navigator class="board-menu-item-text">知识库</navigator>
+        </view>
+        <view class="board-menu-item">
+          <navigator class="board-menu-item-text">团队</navigator>
+        </view>
+        <view class="board-menu-item">
+          <navigator class="board-menu-item-text">我的收藏</navigator>
+        </view>
+        <view class="board-menu-item">
+          <navigator class="board-menu-item-text">分享给我的</navigator>
+        </view>
+        <view class="board-menu-item">
+          <navigator class="board-menu-item-text">我的关注</navigator>
+        </view>
+        <view class="board-menu-item">
+          <navigator class="board-menu-item-text">我的讨论</navigator>
+        </view>
+        <view class="board-menu-item">
+          <navigator class="board-menu-item-text">回收站</navigator>
+        </view>
+      </view>
+      <view class="menu-item">发现</view>
+      <view class="menu-item">帮助</view>
+      <view class="menu-user">
+        <image class="user-icon" src="/static/images/logo-s.svg" />
+        <text class="user-name">littleLane</text>
+      </view>
+      <view class="menu-item">退出</view>
+    </view>
+  </view>
+</view>
