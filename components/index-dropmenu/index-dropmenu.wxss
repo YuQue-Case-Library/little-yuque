@@ -40,11 +40,16 @@
 }
 
 .search-wrapper {
-  
+  position: relative;
 }
 
 .search-wrapper .input-prefix {
-
+  position: absolute;
+  top: 28rpx;
+  left: 28rpx;
+  z-index: 100;
+  font-size: 28rpx;
+  color: #8c8c8c;
 }
 
 .search-wrapper .input {

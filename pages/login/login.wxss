@@ -24,13 +24,14 @@
 
 .psw-wrapper {
   display: flex;
-  border-radius: 4px;
-  border:1px solid #d9d9d9;
 }
 
 .psw-wrapper .input {
   flex: 3;
-  border: none; 
+  border-right: none;
+  border-radius: 0; 
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 
 .input-prefix {
@@ -38,7 +39,10 @@
   align-items: center;
   box-sizing: border-box;
   background: #fff;
-  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+  border-left: none;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
 .prefix-link {

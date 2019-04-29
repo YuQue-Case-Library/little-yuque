@@ -7,7 +7,7 @@
 }
 
 .input-prefix {
-  padding: 16rpx 22rpx;
+  padding: 18rpx 22rpx;
   font-size: 32rpx;
   height: 100%;
   border:1px solid #d9d9d9;

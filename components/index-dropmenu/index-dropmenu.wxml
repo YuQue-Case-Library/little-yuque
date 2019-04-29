@@ -3,7 +3,7 @@
   <view class="dropmenu {{isExpand ? 'show' : ''}}">
     <view class="search">
       <view class="search-wrapper">
-        <view class="input-prefix"></view>
+        <view class="input-prefix larkicon larkicon-search"></view>
         <input class="input" type="text" placeholder="搜索" />
       </view>
     </view>
