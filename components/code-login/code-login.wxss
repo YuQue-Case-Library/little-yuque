@@ -1,0 +1,38 @@
+@import "/static/style/common.wxss";
+
+.form-item {
+  margin-bottom: 32rpx;
+  width: 100%;
+  font-size: 0;
+}
+
+.input-prefix {
+  padding: 18rpx 22rpx;
+  font-size: 32rpx;
+  height: 100%;
+  border:1px solid #d9d9d9;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  background: #fff;
+}
+
+.input-mobile {
+  border-radius: 0 4px 4px 0;
+}
+
+.vercode {
+  margin-left: 16rpx;
+  font-size: 28rpx;
+  letter-spacing: 0;
+  min-width: 208rpx;
+  border-radius: 4px;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 30rpx;
+  color: #595959;
+}
+
+.send-message {
+  margin-bottom: 32rpx;
+  color: #8c8c8c;
+}

@@ -1,5 +1,14 @@
 @import "/static/style/common.wxss";
 
+.container {
+  
+}
+
+.container.unscroll{
+  overflow: hidden;
+  position: fixed;
+}
+
 .h1 {
   margin-bottom: 40rpx;
 }
@@ -14,26 +23,6 @@
 
 .desc {
   font-size: 32rpx;
-}
-
-.header {
-  box-sizing: border-box;
-  padding-left: 24rpx;
-  width: 100%;
-  height: 100rpx;
-  border-bottom: 1px solid #e8e8e8;
-}
-
-.header .header-center {
-  width: 160rpx;
-  height: 64rpx;
-}
-
-.header .header-right .text {
-  margin-right: 16rpx;
-  font-size: 24rpx;
-  color: #595959;
-  white-space: nowrap;
 }
 
 .body {

@@ -1,15 +1,4 @@
 <!-- index.wxml -->
 <view class="container">
-  <view class="flex header">
-    <icon type="success" size="24" />
-    <text>工作台</text>
-    <view class="flex header-right">
-      <navigator class="text" hover-class="none" url="/pages/login/login">登录</navigator>
-      <navigator class="text" hover-class="none" url="/pages/register/register">注册</navigator>
-    </view>
-  </view>
-
-  <view class=""></view>
-  <view ></view>
-  <view ></view>
+  <board-header />
 </view>

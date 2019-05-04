@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "board-dropmenu": "../board-dropmenu/board-dropmenu"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "语雀 - 写文档，就用语雀",
+  "navigationBarTitleText": "服务协议 · 语雀",
   "usingComponents": {
     "header": "../../components/header/header",
     "footer": "../../components/footer/footer"

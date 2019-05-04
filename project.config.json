@@ -12,6 +12,8 @@
 	"appid": "wxeb2f58f950842fa5",
 	"projectname": "little-yuque",
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

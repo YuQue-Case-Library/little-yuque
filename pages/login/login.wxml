@@ -1,25 +1,32 @@
 <view class="container">
-  <view class="header">
-    <image class="logo" src="/static/images/logo-s.svg" />
-    <text class="h2">欢迎回到语雀</text>
-    <text class="">写文档，就用语雀</text>
-  </view>
-  <view class="body">
-    <form bindsubmit="formSubmit" bindreset="formReset">
-      <view class="form-item">
-        <input class="input" name="username" placeholder="手机号/邮箱" />
-      </view>
-      <view class="form-item">
-        <input class="input" password="true" name="password" placeholder="密码" />
-      </view>
-      <view class="form-item">
-        <button type="primary" formType="submit">登录</button>
-      </view>
-    </form>
-    <view class="third-login">
-      <text class="dingTalk">钉钉</text>
-      <text class="toLogin">免费注册</text>
+  <view class="login">
+    <logo-header page-type="login" />
+    <view class="body">
+      <form bindsubmit="formSubmit" bindreset="formReset">
+
+        <view wx:if="{{loginType === 1}}">
+          <view class="form-item">
+            <input class="input" name="username" placeholder="手机号或者邮箱" />
+          </view>
+          <view class="form-item">
+            <view class="psw-wrapper">
+              <input class="input" password="true" name="password" placeholder="密码" />
+              <view class="input-prefix">
+                <navigator class="prefix-link" hover-class="none" url="/pages/login/login">忘记密码？</navigator>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <code-login wx:if="{{loginType === 2}}" />
+        
+        <view class="form-item form-item-button">
+          <button type="primary" formType="submit">登 录</button>
+        </view>
+        <text class="switch-logo" bindtap="handleSwitchLogin">{{loginType === 1 ? '短信验证码登录' : '账户密码登录'}}</text>
+      </form>
+      <third-login page-type="login" />
     </view>
-  </view>
-  <view class="footer"></view>
+  </view> 
+  <footer />
 </view>

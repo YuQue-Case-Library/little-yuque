@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="third-login">
+    <view class="ding-talk">
+      <view class="logo"></view>
+      <!-- <image class="logo" mode="top" src="/static/images/iSBYXPhvTkwhjYUQVMLG.png" /> -->
+      <navigator hover-class="none" url="/pages/login/login">钉钉</navigator>
+    </view>
+    <navigator wx:if="{{pageType==='register'}}" class="to-login" hover-class="none" url="/pages/login/login">直接登录</navigator>
+    <navigator wx:elif="{{pageType==='login'}}" class="to-login" hover-class="none" url="/pages/register/register">免费注册</navigator>
+  </view>
+</view>

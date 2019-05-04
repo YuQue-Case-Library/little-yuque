@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "index-dropmenu": "../index-dropmenu/index-dropmenu"
+  }
+}

@@ -1,14 +1,6 @@
 <!-- index.wxml -->
-<view class="container">
-  <view class="flex header">
-    <icon type="success" size="24" />
-    <image class="header-center" src="/static/images/logo.svg" /> 
-    <view class="flex header-right">
-      <navigator class="text" hover-class="none" url="/pages/login/login">登录</navigator>
-      <navigator class="text" hover-class="none" url="/pages/register/register">注册</navigator>
-    </view>
-  </view>
-
+<view class="container {{isUnscroll ? 'unscroll' : ''}}">
+  <header bind:scrollEvent="handleUnscroll" />
   <view class="body">
     <view class="join-section">
       <view class="flex join-wrapper">

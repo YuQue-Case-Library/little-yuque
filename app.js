@@ -1,5 +1,5 @@
 //app.js
-const $api = require('./utils/api');
+const $api = require('/static/utils/api');
 
 App({
   onLaunch: function () {
