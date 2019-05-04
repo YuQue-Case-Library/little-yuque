@@ -7,16 +7,17 @@ const response_code_msg = {
   500: '服务器异常',
 }
 
-// 默认的请求 header
-let customerHeader = {
-  'User-Agent': 'little-yuque',
-  'X-Auth-Token': 'gd0a7eiGTEjXQ7NAichYrHKeeS6jRjhuJfRujCtk',
-}
+const baseUrl = 'https://www.yuque.com/api/v2'
 
-const baseUrl = 'https://www.yuque.com/api/v2';
+const $api = apiParams => {
+  const userToken = wx.getStorageSync('userToken')
+  const { method = 'GET', header, url } = apiParams
 
-const $api = (apiParams) => {
-  const { method = 'GET', header, url } = apiParams;
+  // 请求 header
+  let customerHeader = {
+    'User-Agent': 'yuque-smart',
+    'X-Auth-Token': userToken,
+  }
 
   if(['POST', 'PUT'].includes(method)) {
     customerHeader = {
@@ -29,7 +30,7 @@ const $api = (apiParams) => {
   return wx.request({
     ...apiParams,
     url: baseUrl + url,
-    header,
+    header: customerHeader,
     fail ({ data: { status } }) {
       wx.showToast({
         title: response_code_msg[status],
@@ -38,7 +39,7 @@ const $api = (apiParams) => {
       })
     },
     complete({ data: { status } }) {
-      const responseMsg = response_code_msg[status];
+      const responseMsg = response_code_msg[status]
 
       if(typeof responseMsg !== 'undefined') {
         wx.showToast({
@@ -48,7 +49,7 @@ const $api = (apiParams) => {
         })
       }
     }
-  });
+  })
 }
 
 module.exports = $api
