@@ -1,32 +1,17 @@
 <view class="container">
   <view class="login">
-    <logo-header page-type="login" />
+    <logo-header></logo-header>
     <view class="body">
       <form bindsubmit="formSubmit" bindreset="formReset">
-
-        <view wx:if="{{loginType === 1}}">
-          <view class="form-item">
-            <input class="input" name="username" placeholder="手机号或者邮箱" />
-          </view>
-          <view class="form-item">
-            <view class="psw-wrapper">
-              <input class="input" password="true" name="password" placeholder="密码" />
-              <view class="input-prefix">
-                <navigator class="prefix-link" hover-class="none" url="/pages/login/login">忘记密码？</navigator>
-              </view>
-            </view>
-          </view>
+        <view class="form-item">
+          <input class="input" name="userToken" placeholder="请输入 Token 进行登录操作" value="gd0a7eiGTEjXQ7NAichYrHKeeS6jRjhuJfRujCtk" />
         </view>
-
-        <code-login wx:if="{{loginType === 2}}" />
-        
-        <view class="form-item form-item-button">
-          <button type="primary" formType="submit">登 录</button>
+        <view class="form-item form-buttons">
+          <button class="form-button" formType="reset">重 置</button>
+          <button class="form-button" type="primary" formType="submit">登 录</button>
         </view>
-        <text class="switch-logo" bindtap="handleSwitchLogin">{{loginType === 1 ? '短信验证码登录' : '账户密码登录'}}</text>
       </form>
-      <third-login page-type="login" />
     </view>
+    <navigator url="" redirect="false" open-type="redirect" class="footer">关于 Token</navigator>
   </view> 
-  <footer />
 </view>
