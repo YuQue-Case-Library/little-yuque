@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="core-view">
+    <view class="view-header">
+      <text class="has-group">已参与团队：<text >8</text></text>
+      <button class="add-group" type="primary">新建团队</button>
+    </view>
+    <view class="view-content">
+      <view class="group-view">
+        <view class="group-box">
+          <image class="group-icon" src="https://cdn.nlark.com/yuque/0/2019/png/114852/1555895624302-avatar/451bb66c-530c-499d-ae70-f621ab6beeff.png?x-oss-process=image/resize,m_fill,w_192,h_192/format,png"/>
+          <view class="group-info-box">
+            <view class="group-info">
+              <text class="group-name">一起学前端</text>
+              <text class="group-desc">描述信息</text>
+            </view>
+            <text class=""></text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

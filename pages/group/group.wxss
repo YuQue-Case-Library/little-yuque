@@ -1,0 +1,64 @@
+@import "/static/style/common.wxss";
+
+.container {
+  height: 100vh;
+  width: 100%;
+}
+
+.container .core-view {
+  margin: 40rpx auto 0;
+  width: 90%;
+}
+
+.core-view .view-header {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin-bottom: 40rpx;
+}
+
+.core-view .view-header .has-group {
+
+}
+
+.core-view .view-header .add-group {
+  font-size: 24rpx;
+}
+
+.view-content {
+
+}
+
+.view-content .group-view {
+
+}
+
+.view-content .group-view .group-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.group-box .group-icon {
+  margin-right: 36rpx;
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 100%; 
+}
+
+.group-box .group-info-box {
+  flex: 1;
+  padding: 8rpx 24rpx;
+  text-align: left;
+  border: 1px solid #25b864;
+  border-radius: 4px; 
+}
+
+.group-info-box .group-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.group-info-box .group-info .group-desc {
+  font-size: 24rpx;
+  color: #8c8c8c;
+}

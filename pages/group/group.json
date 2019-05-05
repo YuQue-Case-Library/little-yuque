@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "登录 · 语雀",
+  "usingComponents": {
+    "logo-header": "../../components/logo-header/logo-header",
+    "code-login": "../../components/code-login/code-login",
+    "third-login": "../../components/third-login/third-login",
+    "footer": "../../components/footer/footer"
+  }
+}
