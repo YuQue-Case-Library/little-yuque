@@ -1,4 +1,21 @@
-<!-- index.wxml -->
 <view class="container">
-  <board-header />
+  <view class="tab-view"></view>
+  <view class="tabs">
+    <navigator class="tab" url="" redirect="false" open-type="switchTab">
+      <text class="larkicon larkicon-file"></text>
+      <text>文 档</text>
+    </navigator>
+    <navigator class="tab" url="" redirect="false" open-type="switchTab">
+      <text class="larkicon larkicon-storehouse"></text>
+      <text>知识库</text>
+    </navigator>
+    <navigator class="tab" url="" redirect="false" open-type="switchTab">
+      <text class="larkicon larkicon-team"></text>
+      <text>团 队</text>
+    </navigator>
+    <navigator class="tab" url="" redirect="false" open-type="switchTab">
+      <text class="larkicon larkicon-user-h"></text>
+      <text>我 的</text>
+    </navigator>
+  </view>
 </view>
