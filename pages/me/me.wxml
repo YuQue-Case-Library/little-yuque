@@ -1,0 +1,51 @@
+<view class="container">
+  <view class="core-view">
+    <view class="core-view-common info-view">
+      <image class="header-pic" src="https://cdn.nlark.com/yuque/0/2019/png/114852/1555895624302-avatar/451bb66c-530c-499d-ae70-f621ab6beeff.png?x-oss-process=image/resize,m_fill,w_192,h_192/format,png" />
+      <view class="info">
+        <text class="nickname">littleLane</text>
+        <text class="desc">小小搬瓦工！</text>
+        <text class="address">https://www.yuque.com/littlelane</text>
+      </view>
+    </view>
+    <view class="follow-view">
+      <view class="follow-box">
+        <text>关注了</text>
+        <text class="follow-num">20</text>
+      </view>
+      <view class="follow-box">
+        <text>关注了</text>
+        <text class="follow-num">20</text>
+      </view>
+    </view>
+  </view>
+  <view class="core-view">
+    <view class="core-view-box">
+      <view class="core-view-common">点击复制 Token</view>
+    </view>
+  </view>
+  <view class="core-view">
+    <view class="core-view-box bordered">
+      <view class="core-view-common">清除缓存</view>
+    </view>
+  </view>
+  <view class="core-view">
+    <view class="core-view-box bordered">
+      <view class="core-view-common">更新记录</view>
+    </view>
+    <view class="core-view-box bordered">
+      <view class="core-view-common">关于语雀 Smart</view>
+    </view>
+    <view class="core-view-box bordered">
+      <view class="core-view-common">关于作者</view>
+    </view>
+    <view class="core-view-box">
+      <view class="core-view-common">吐槽一下</view>
+    </view>
+  </view>
+  <view class="core-view">
+    <view class="core-view-box danger text-center">
+      <text>退出登录</text>
+    </view>
+  </view>
+</view>

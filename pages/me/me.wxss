@@ -1,0 +1,77 @@
+@import "/static/style/common.wxss";
+
+.container {
+  background-color: #f0f2f5;
+  height: 100vh;
+  width: 100%;
+}
+
+.container .core-view {
+  margin-bottom: 20rpx;
+  width: 100%;
+  background-color: #fff;
+}
+
+.core-view-common {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+}
+
+.core-view-common.info-view {
+  padding: 40rpx 0;
+}
+
+.core-view-box {
+  padding: 28rpx 0;
+}
+
+.core-view-box.bordered {
+  border-bottom: 1px solid #eee;
+}
+
+.core-view-box.danger {
+  color: #f56c6c;
+}
+
+.info-view .header-pic {
+  margin-right: 32rpx;
+  width: 158rpx;
+  height: 158rpx;
+  border-radius: 100%; 
+}
+
+.info-view .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 28rpx;
+  color: #8c8c8c;
+  
+}
+
+.info-view .info .nickname {
+  font-size: 40rpx;
+  color: #262626;
+}
+
+.follow-view {
+  margin: 0 auto;
+  padding: 32rpx 0;
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.follow-view .follow-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #8c8c8c;
+}
+
+.follow-view .follow-box .follow-num {
+  font-size: 40rpx;
+  color: #595959;
+  font-weight: 700;
+}
