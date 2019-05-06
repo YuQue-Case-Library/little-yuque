@@ -1,7 +1,6 @@
 @import "/static/style/common.wxss";
 
 .container {
-  height: 100vh;
   width: 100%;
 }
 
@@ -11,17 +10,17 @@
 }
 
 .core-view .view-header {
+  padding-bottom: 48rpx;
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
-  margin-bottom: 40rpx;
 }
 
 .core-view .view-header .has-group {
-
+  flex: 1;
 }
 
 .core-view .view-header .add-group {
+  width: 160rpx;
   font-size: 24rpx;
 }
 
@@ -39,7 +38,7 @@
 }
 
 .group-box .group-icon {
-  margin-right: 36rpx;
+  margin-right: 32rpx;
   width: 90rpx;
   height: 90rpx;
   border-radius: 100%; 
@@ -59,6 +58,10 @@
 }
 
 .group-info-box .group-info .group-desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 500rpx;
   font-size: 24rpx;
   color: #8c8c8c;
 }
