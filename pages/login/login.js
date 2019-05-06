@@ -20,9 +20,15 @@ Page({
           url: '/user',
           success({ data }) {
             if (data && data.data) {
+              const userInfo = data.data || {}
               wx.setStorage({
                 key: 'userInfo',
-                data: data.data,
+                data: userInfo,
+                success: () => {
+                  wx.redirectTo({
+                    url: 'pages/dashboard/dashboard'
+                  })
+                }
               })
             }
           }
