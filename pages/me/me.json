@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "登录 · 语雀",
+  "component": true,
   "usingComponents": {
     "logo-header": "../../components/logo-header/logo-header",
     "code-login": "../../components/code-login/code-login",
