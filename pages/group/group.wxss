@@ -45,7 +45,10 @@
 }
 
 .group-box .group-info-box {
+  position: relative;
   flex: 1;
+  display: flex;
+  align-items: center;
   padding: 8rpx 24rpx;
   text-align: left;
   border: 1px solid #25b864;
@@ -61,7 +64,32 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: 500rpx;
+  max-width: 460rpx;
   font-size: 24rpx;
+  color: #8c8c8c;
+}
+
+.group-info-box .group-link {
+  position: absolute;
+  right: 24rpx;
+  color: #25b864;
+  font-size: 28rpx;
+}
+
+.no-group-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120rpx;
+}
+
+.no-group-data .no-data-icon {
+  margin-bottom: 40rpx;
+  width: 240rpx;
+  height: 240rpx;
+}
+
+.no-group-data .no-data-title {
+  display: inline-block;
   color: #8c8c8c;
 }

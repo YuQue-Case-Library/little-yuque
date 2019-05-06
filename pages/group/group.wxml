@@ -1,21 +1,25 @@
 <view class="container">
   <view class="core-view">
     <view class="view-header">
-      <text class="has-group">已参与团队：<text >8</text></text>
+      <text class="has-group">已参与团队：<text>{{groupNum}}</text></text>
       <button class="add-group" type="primary">新建团队</button>
     </view>
     <view class="view-content">
-      <view class="group-view">
+      <view class="group-view" wx:if="{{groupNum > 0}}" wx:for="{{groups}}" wx:key="index">
         <view class="group-box">
-          <image class="group-icon" src="https://cdn.nlark.com/yuque/0/2019/png/114852/1555895624302-avatar/451bb66c-530c-499d-ae70-f621ab6beeff.png?x-oss-process=image/resize,m_fill,w_192,h_192/format,png"/>
+          <image class="group-icon" src="{{item.avatar_url}}"/>
           <view class="group-info-box">
             <view class="group-info">
-              <text class="group-name">一起学前端</text>
-              <text class="group-desc">描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息</text>
+              <text class="group-name">{{item.name}}</text>
+              <text class="group-desc">{{item.description}}</text>
             </view>
-            <text class=""></text>
+            <text class="group-link larkicon larkicon-arrow-right"></text>
           </view>
         </view>
+      </view>
+      <view wx:if="{{groupNum === 0}}" class="no-group-data">
+        <image class="no-data-icon" src="/static/images/no-data.png" />
+        <text class="no-data-title">暂未加入任何团队</text>
       </view>
     </view>
   </view>
