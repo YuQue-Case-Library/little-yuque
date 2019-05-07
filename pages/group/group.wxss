@@ -42,6 +42,7 @@
   width: 90rpx;
   height: 90rpx;
   border-radius: 100%; 
+  box-shadow: 0 0 10px rgba(0,21,41,.08);
 }
 
 .group-box .group-info-box {

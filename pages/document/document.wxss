@@ -3,9 +3,52 @@
 
 .container {
   width: 100%;
+  min-height: 100vh;
+  background-color: #f5f5f5;
 }
 
 .container .core-view {
   margin: 40rpx auto 0;
-  width: 90%;
+}
+
+.doc-box{
+  position: relative;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+}
+
+.doc-box .doc-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 36rpx;
+}
+
+.doc-box .doc-wrapper .doc-icon {
+  margin-right: 36rpx;
+  color: #4DABFD;
+}
+
+.doc-box .doc-wrapper .doc-info {
+  line-height: 1.8;
+}
+
+.doc-box .doc-link {
+  position: absolute;
+  right: 36rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #4DABFD;
+  font-size: 30rpx;
+}
+
+.doc-info .doc-title {
+  max-width: 540rpx;
+  color: #262626;
+  font-size: 32rpx;
+}
+
+.doc-info .doc-belong {
+  max-width: 540rpx;
+  color: #8c8c8c;
+  font-size: 26rpx;
 }

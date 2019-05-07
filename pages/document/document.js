@@ -1,33 +1,31 @@
 const app = new getApp()
 
-Page({
-  // 提交表单
-  formSubmit(e) {
-    const { userToken } = e.detail.value
-
-    if(userToken !== '') {
-      this.login({ userToken })
-    }
+Component({
+  data: {
+    docNum: -1,
+    docs: []
   },
 
-  // 登录
-  login({ userToken }) {
-    wx.setStorage({
-      key: 'userToken',
-      data: userToken,
-      success() {
-        app.globalData.$api({
-          url: '/user',
-          success({ data }) {
-            if (data && data.data) {
-              wx.setStorage({
-                key: 'userInfo',
-                data: data.data,
-              })
-            }
-          }
-        })
+  ready() {
+    wx.getStorage({
+      key: 'userInfo',
+      success: res => {
+        const userInfo = res.data
+
+        if (userInfo && userInfo.id) {
+          // app.globalData.$api({
+          //   url: `/users/${userInfo.id}/docs`,
+          //   success: ({ data: resData }) => {
+          //     if (resData && Array.isArray(resData.data)) {
+          //       this.setData({
+          //         docNum: resData.data.length,
+          //         docs: resData.data
+          //       })
+          //     }
+          //   }
+          // })
+        }
       }
     })
-  },
+  }
 })
