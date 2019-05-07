@@ -75,21 +75,3 @@
   color: #25b864;
   font-size: 28rpx;
 }
-
-.no-group-data {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 120rpx;
-}
-
-.no-group-data .no-data-icon {
-  margin-bottom: 40rpx;
-  width: 240rpx;
-  height: 240rpx;
-}
-
-.no-group-data .no-data-title {
-  display: inline-block;
-  color: #8c8c8c;
-}

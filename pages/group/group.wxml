@@ -17,9 +17,8 @@
           </view>
         </view>
       </view>
-      <view wx:if="{{groupNum === 0}}" class="no-group-data">
-        <image class="no-data-icon" src="/static/images/no-data.png" />
-        <text class="no-data-title">暂未加入任何团队</text>
+      <view wx:if="{{groupNum === 0}}">
+        <no-data title="暂未加入任何团队"></no-data>
       </view>
     </view>
   </view>

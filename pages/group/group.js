@@ -2,7 +2,7 @@ const app = new getApp()
 
 Component({
   data: {
-    groupNum: 0,
+    groupNum: -1,
     groups: []
   },
 
