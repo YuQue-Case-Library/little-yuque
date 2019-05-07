@@ -1,0 +1,19 @@
+@import "/static/style/common.wxss";
+
+.no-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120rpx;
+}
+
+.no-data .no-data-icon {
+  margin-bottom: 40rpx;
+  width: 240rpx;
+  height: 240rpx;
+}
+
+.no-data .no-data-title {
+  display: inline-block;
+  color: #8c8c8c;
+}
