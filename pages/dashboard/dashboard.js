@@ -1,7 +1,9 @@
 Page({
   data:{
+    tabActive: 1
   },
   onLoad:function(options){
+    console.log('onLoad')
     // 生命周期函数--监听页面加载
   },
   onReady:function(){
@@ -21,5 +23,17 @@ Page({
   },
   onReachBottom: function() {
     // 页面上拉触底事件的处理函数
+  },
+
+  // 切换 footer tab
+  handleChangeTab(e) {
+    const currentActive = e.currentTarget.dataset.index
+    if (this.data.tabActive === currentActive) {
+      return
+    }
+    
+    this.setData({
+      tabActive: e.currentTarget.dataset.index
+    })
   }
 })

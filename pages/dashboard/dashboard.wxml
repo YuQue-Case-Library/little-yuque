@@ -1,21 +1,26 @@
 <view class="container">
-  <view class="tab-view"></view>
+  <scroll-view class="tab-view">
+    <document wx:if="{{tabActive == 1}}"></document>
+    <repository wx:if="{{tabActive == 2}}"></repository>
+    <group wx:if="{{tabActive == 3}}"></group>
+    <me wx:if="{{tabActive == 4}}"></me>
+  </scroll-view>
   <view class="tabs">
-    <navigator class="tab" url="" redirect="false" open-type="switchTab">
+    <view class="tab" data-index="1" bindtap="handleChangeTab">
       <text class="larkicon larkicon-file"></text>
       <text>文 档</text>
-    </navigator>
-    <navigator class="tab" url="" redirect="false" open-type="switchTab">
+    </view>
+    <view class="tab" data-index="2" bindtap="handleChangeTab">
       <text class="larkicon larkicon-storehouse"></text>
       <text>知识库</text>
-    </navigator>
-    <navigator class="tab" url="" redirect="false" open-type="switchTab">
+    </view>
+    <view class="tab" data-index="3" bindtap="handleChangeTab">
       <text class="larkicon larkicon-team"></text>
       <text>团 队</text>
-    </navigator>
-    <navigator class="tab" url="" redirect="false" open-type="switchTab">
+    </view>
+    <view class="tab" data-index="4" bindtap="handleChangeTab">
       <text class="larkicon larkicon-user-h"></text>
       <text>我 的</text>
-    </navigator>
+    </view>
   </view>
 </view>
