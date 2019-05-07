@@ -12,7 +12,7 @@
         <view class="count">{{item.items_count}}</view>
       </view>
       <view class="repository-footer">
-        <view class="desc">{{item.description}}</view>
+        <view class="desc ellipsis">{{item.description}}</view>
         <view class="belong">{{item.namespace}}</view>
       </view>
     </view>

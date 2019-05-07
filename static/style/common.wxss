@@ -59,3 +59,9 @@
 navigator {
   color: #096dd9;
 }
+
+.ellipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

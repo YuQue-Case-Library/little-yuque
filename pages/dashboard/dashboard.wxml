@@ -1,10 +1,10 @@
 <view class="container">
-  <scroll-view class="tab-view">
+  <view class="tab-view">
     <document wx:if="{{tabActive == 1}}"></document>
     <repository wx:if="{{tabActive == 2}}"></repository>
     <group wx:if="{{tabActive == 3}}"></group>
     <me wx:if="{{tabActive == 4}}"></me>
-  </scroll-view>
+  </view>
   <view class="tabs">
     <view class="tab" data-index="1" bindtap="handleChangeTab">
       <text class="larkicon larkicon-file"></text>

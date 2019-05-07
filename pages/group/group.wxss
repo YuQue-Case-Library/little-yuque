@@ -61,9 +61,6 @@
 }
 
 .group-info-box .group-info .group-desc {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   max-width: 460rpx;
   font-size: 24rpx;
   color: #8c8c8c;

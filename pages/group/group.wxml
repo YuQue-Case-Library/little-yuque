@@ -11,7 +11,7 @@
           <view class="group-info-box">
             <view class="group-info">
               <text class="group-name">{{item.name}}</text>
-              <text class="group-desc">{{item.description}}</text>
+              <text class="group-desc ellipsis">{{item.description}}</text>
             </view>
             <text class="group-link larkicon larkicon-arrow-right"></text>
           </view>

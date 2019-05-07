@@ -5,8 +5,8 @@
 }
 
 .tab-view {
+  margin-bottom: 114rpx;
   width: 100%;
-  min-height: calc(100vh - 134rpx);
 }
 
 .tabs {
