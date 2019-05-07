@@ -51,7 +51,7 @@
 }
 
 .repository-box .repository-header .title {
-  font-size: 42rpx;
+  font-size: 34rpx;
 }
 
 .repository-box .repository-footer {

@@ -1,16 +1,23 @@
 <view class="container">
   <view class="core-view">
-    <view class="repository-box">
+    <view
+      class="repository-box"
+      wx:if="{{repositoryNum > 0}}"
+      wx:for="{{repositories}}"
+      wx:key="index"
+    >
       <image class="repository-bg" src="/static/images/sWiZyNKIDyiSrxV.png" />
       <view class="repository-header">
-        <text class="title">RxJS</text>
-        <view class="count">10</view>
+        <text class="title">{{item.name}}</text>
+        <view class="count">{{item.items_count}}</view>
       </view>
       <view class="repository-footer">
-        <view class="desc">巴拉升级你的江苏南京的你就说你点击</view>
-        <view class="belong">littlrLane</view>
+        <view class="desc">{{item.description}}</view>
+        <view class="belong">{{item.namespace}}</view>
       </view>
     </view>
-    
+    <view  wx:if="{{repositoryNum === 0}}">
+      <no-data title="暂无任何知识库"></no-data>
+    </view>
   </view>
 </view>
