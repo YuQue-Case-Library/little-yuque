@@ -53,6 +53,7 @@
   text-align: left;
   border: 1px solid #25b864;
   border-radius: 4px; 
+  box-shadow: 0 0px 10px #b9f0d167;
 }
 
 .group-info-box .group-info {

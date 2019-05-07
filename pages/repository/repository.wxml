@@ -13,7 +13,7 @@
       </view>
       <view class="repository-footer">
         <view class="desc ellipsis">{{item.description}}</view>
-        <view class="belong">{{item.namespace}}</view>
+        <view class="belong ellipsis">{{item.namespace}}</view>
       </view>
     </view>
     <view  wx:if="{{repositoryNum === 0}}">

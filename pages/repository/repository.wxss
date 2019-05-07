@@ -25,6 +25,7 @@
   width: 44%;
   height: 320rpx;
   background-color: #fff;
+  box-shadow: 0 0px 10px rgba(0,21,41,.08);
 }
 
 .repository-box .repository-bg {
@@ -65,5 +66,6 @@
 
 
 .repository-box .repository-footer .belong {
+  max-width: 280rpx;
   color: #8c8c8c;
 }

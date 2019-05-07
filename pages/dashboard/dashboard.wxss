@@ -5,7 +5,7 @@
 }
 
 .tab-view {
-  margin-bottom: 114rpx;
+  margin-bottom: 106rpx;
   width: 100%;
 }
 
