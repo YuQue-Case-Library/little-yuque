@@ -1,0 +1,51 @@
+@import "/static/style/common.wxss";
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container .core-view {
+  margin: 40rpx auto 0;
+  width: 90%;
+}
+
+.container .core-view  .title {
+  margin-bottom: 42rpx;
+  font-size: 40rpx;
+  text-align: center;
+}
+
+.container .core-view .form-item {
+  margin-bottom: 28rpx;
+  width: 100%;
+}
+
+.form-item.form-buttons {
+  display: flex;
+  margin-bottom: 0;
+}
+
+.form-buttons .form-button {
+  font-size: 28rpx;
+  width: 50%;
+}
+
+.form-buttons .form-button:not(:last-of-type) {
+  margin-right: 28rpx;
+}
+
+.form-item.tip {
+  text-align: center;
+  color: #8c8c8c;
+  font-size: 26rpx;
+}
+
+.form-item.tip .icon {
+  margin-right: 20rpx;
+  padding: 6rpx 10rpx;
+  background-color: #eee;
+  border-radius: 4px; 
+  color: #52d38a;
+  font-size: 20rpx;
+}
