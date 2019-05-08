@@ -35,6 +35,7 @@
 .view-content .group-view .group-box {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 40rpx;
 }
 
 .group-box .group-icon {

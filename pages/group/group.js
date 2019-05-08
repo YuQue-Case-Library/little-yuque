@@ -27,5 +27,13 @@ Component({
         }
       }
     })
+  },
+
+  methods: {
+    toCreateGroup() {
+      wx.navigateTo({
+        url: '/pages/group-add/group-add'
+      })
+    }
   }
 })
