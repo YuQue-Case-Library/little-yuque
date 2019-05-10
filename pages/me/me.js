@@ -119,7 +119,7 @@ Component({
           if (res.confirm) {
             this.handleClear(() => {
               wx.redirectTo({
-                url: 'pages/login/login'
+                url: '/pages/login/login'
               })
             })
           }

@@ -26,7 +26,7 @@ Page({
                 data: userInfo,
                 success: () => {
                   wx.redirectTo({
-                    url: 'pages/dashboard/dashboard'
+                    url: '/pages/dashboard/dashboard'
                   })
                 }
               })
