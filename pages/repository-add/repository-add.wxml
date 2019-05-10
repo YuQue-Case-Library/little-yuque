@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="core-view">
+    <view class="title">创建知识库</view>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="form-item">
+        <input name="name" class="input" placeholder="知识库名称"/>
+      </view>
+      <view class="form-item">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">
+            选择类型：{{array[index]}}
+          </view>
+        </picker>
+      </view>
+      <view class="form-item">
+        <input name="description" class="input"placeholder="知识库简介"/>
+      </view>
+      <view class="form-item form-buttons">
+        <button class="form-button" form-type="reset">重置</button>
+        <button class="form-button" type="primary" form-type="submit">创建</button>
+      </view>
+      <view class="form-item tip">
+        <text class="icon">温馨提示</text>
+        <text>目前小程序暂未支持团队头像上传</text>
+      </view>
+    </form>
+  </view>
+</view>
