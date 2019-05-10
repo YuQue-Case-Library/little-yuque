@@ -4,51 +4,36 @@
 .container {
   width: 100%;
   min-height: 100vh;
-  background-color: #f5f5f5;
 }
 
 .container .core-view {
   margin: 40rpx auto 0;
+  width: 86%;
 }
 
-.doc-box{
-  position: relative;
-  border-bottom: 1px solid #eee;
-  background-color: #fff;
-}
-
-.doc-box .doc-wrapper {
+.core-view .title {
   display: flex;
   align-items: center;
-  padding: 20rpx 36rpx;
 }
 
-.doc-box .doc-wrapper .doc-icon {
-  margin-right: 36rpx;
-  color: #4DABFD;
-}
-
-.doc-box .doc-wrapper .doc-info {
-  line-height: 1.8;
-}
-
-.doc-box .doc-link {
-  position: absolute;
-  right: 36rpx;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #4DABFD;
-  font-size: 30rpx;
-}
-
-.doc-info .doc-title {
-  max-width: 540rpx;
-  color: #262626;
+.title .title-icon {
+  margin-right: 16rpx;
+  color: #1890ff;
   font-size: 32rpx;
 }
 
-.doc-info .doc-belong {
-  max-width: 540rpx;
-  color: #8c8c8c;
-  font-size: 26rpx;
+.container .core-view .create-doc {
+  margin: 36rpx auto 0;
+  box-sizing: border-box;
+  height: 200rpx;
+  line-height: 200rpx;
+  text-align: center;
+  border: 2px solid #25b864;
+  border-radius: 6px; 
+  box-shadow: 0 0px 10px #b9f0d167 inset;
+}
+
+.create-doc .create-icon{
+  color: #1d9752;
+  font-weight: 600;
 }
