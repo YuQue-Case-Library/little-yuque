@@ -1,26 +1,20 @@
 <view class="container">
   <view class="tab-view">
-    <document wx:if="{{tabActive == 1}}"></document>
-    <repository wx:if="{{tabActive == 2}}"></repository>
-    <group wx:if="{{tabActive == 3}}"></group>
-    <me wx:if="{{tabActive == 4}}"></me>
+    <document wx:if="{{tabActive === 'document'}}"></document>
+    <repository wx:if="{{tabActive === 'repository'}}"></repository>
+    <group wx:if="{{tabActive === 'group'}}"></group>
+    <me wx:if="{{tabActive === 'me'}}"></me>
   </view>
   <view class="tabs">
-    <view class="tab" data-index="1" bindtap="handleChangeTab">
-      <text class="larkicon larkicon-file"></text>
-      <text>文 档</text>
-    </view>
-    <view class="tab" data-index="2" bindtap="handleChangeTab">
-      <text class="larkicon larkicon-storehouse"></text>
-      <text>知识库</text>
-    </view>
-    <view class="tab" data-index="3" bindtap="handleChangeTab">
-      <text class="larkicon larkicon-team"></text>
-      <text>团 队</text>
-    </view>
-    <view class="tab" data-index="4" bindtap="handleChangeTab">
-      <text class="larkicon larkicon-user-h"></text>
-      <text>我 的</text>
+    <view
+      wx:for="{{tabData}}"
+      wx:key="index"
+      class="tab {{tabActive === item.value ? 'current' : ''}}"
+      data-index="{{item.value}}"
+      bindtap="handleChangeTab"
+    >
+      <text class="larkicon larkicon-{{item.icon}}"></text>
+      <text>{{item.text}}</text>
     </view>
   </view>
 </view>

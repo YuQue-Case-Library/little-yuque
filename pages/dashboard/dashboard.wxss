@@ -11,7 +11,7 @@
 .tabs {
   position: fixed;
   bottom: 0;
-  padding: 10rpx;
+  padding: 12rpx 0 10rpx;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -23,9 +23,15 @@
 .tabs .tab {
   display: flex;
   flex-direction: column;
-  line-height: 1.5;
+  transition: all 0.3s ease-in-out;
+}
+
+.tabs .tab.current {
+  color: #096dd9;
+  font-weight: 700;
 }
 
 .tabs .tab .larkicon {
+  margin-bottom: 8rpx;
   font-size: 46rpx;
 }
