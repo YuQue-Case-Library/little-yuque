@@ -15,7 +15,6 @@ const $api = apiParams => {
 
   // 请求 header
   let customerHeader = {
-    'User-Agent': 'yuque-smart',
     'X-Auth-Token': userToken,
   }
 
