@@ -1,5 +1,9 @@
 <view class="container">
   <view class="core-view">
+    <view class="view-header">
+      <text class="has-group">已有知识库：<text>{{repositoryNum < 0 ? 0 : repositoryNum}}</text></text>
+      <button class="add-group" type="primary" bindtap="toCreateRepo">新建知识库</button>
+    </view>
     <view
       class="repository-box"
       wx:if="{{repositoryNum > 0}}"

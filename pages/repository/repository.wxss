@@ -2,6 +2,7 @@
 @import "/static/style/DIN-Medium.wxss";
 
 .container {
+  margin-bottom: 106rpx;
   clear: both;
   overflow: hidden;
   width: 100%;
@@ -12,6 +13,22 @@
 .container .core-view {
   margin: 40rpx auto 0;
   width: 100%;
+}
+
+.core-view .view-header {
+  padding: 0 4% 48rpx 4%;
+  display: flex;
+  align-items: center;
+}
+
+.core-view .view-header .has-group {
+  flex: 1;
+  font-size: 32rpx;
+}
+
+.core-view .view-header .add-group {
+  width: 200rpx;
+  font-size: 24rpx;
 }
 
 .repository-box {

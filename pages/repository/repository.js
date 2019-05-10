@@ -33,6 +33,11 @@ Component({
     _filterBelong(item) {
       console.log(item)
       return item.namespace
+    },
+    toCreateRepo() {
+      wx.navigateTo({
+        url: '/pages/repository-add/repository-add'
+      })
     }
   }
 })
