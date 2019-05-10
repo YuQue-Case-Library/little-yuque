@@ -1,7 +1,8 @@
 @import "/static/style/common.wxss";
+@import "/static/style/DIN-Medium.wxss";
 
 .container {
-  margin-bottom: 106rpx;
+  margin-bottom: 112rpx;
   overflow: auto;
   background-color: #f0f2f5;
   width: 100%;
@@ -71,10 +72,12 @@
   flex-direction: column;
   align-items: center;
   color: #8c8c8c;
+  line-height: 1.5;
 }
 
 .follow-view .follow-box .follow-num {
-  font-size: 40rpx;
+  font-size: 44rpx;
   color: #595959;
   font-weight: 700;
+  font-family: 'DIN';
 }
