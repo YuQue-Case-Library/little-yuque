@@ -3,20 +3,48 @@
     <view class="title">创建知识库</view>
     <form bindsubmit="formSubmit" bindreset="formReset">
       <view class="form-item">
-        <input name="name" class="input" placeholder="知识库名称"/>
-      </view>
-      <view class="form-item">
-        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-          <view class="picker">
-            选择类型：{{array[index]}}
+        <picker bindchange="handleTypePick" value="{{index}}" range-key="name" range="{{repoTypes}}">
+          <view class="compact-view">
+            <view class="compact-view-prefix">类型</view>
+            <input class="compact-view-input" value="{{repoTypes[selectTypeIndex].name}}" disabled placeholder="请选择知识库类型"/>
           </view>
         </picker>
       </view>
       <view class="form-item">
-        <input name="description" class="input"placeholder="知识库简介"/>
+        <view class="compact-view">
+          <view class="compact-view-prefix">名称</view>
+          <input name="name" class="compact-view-input" placeholder="知识库名称"/>
+        </view>
       </view>
-      <view class="form-item form-buttons">
-        <button class="form-button" form-type="reset">重置</button>
+      <view class="form-item">
+        <view class="compact-view">
+          <view class="compact-view-prefix">www.yuque.com/littlelane/</view>
+          <input name="book_slug" class="compact-view-input" placeholder="知识库路径"/>
+        </view>
+      </view>
+      <view class="form-item">
+        <view class="compact-view">
+          <view class="compact-view-prefix">简介</view>
+          <input name="description" class="compact-view-input"placeholder="知识库简介"/>
+        </view>
+      </view>
+      <view class="form-item">
+        <picker bindchange="handleGroupPick" value="{{index}}" range-key="name" range="{{ownGroups}}">
+          <view class="compact-view">
+            <view class="compact-view-prefix">归属</view>
+            <input class="compact-view-input" value="{{ownerGroups[selectedGroupIndex].name}}" disabled placeholder="请选择知识库归属"/>
+          </view>
+        </picker>
+      </view>
+      <view class="form-item">
+        <picker bindchange="handlePublicPick" value="{{index}}" range-key="name" range="{{publicArray}}">
+          <view class="compact-view">
+            <view class="compact-view-prefix">可见范围</view>
+            <input class="compact-view-input" value="{{publicArray[selectPublicIndex].name}}" disabled placeholder="请设置可见范围"/>
+          </view>
+        </picker>
+      </view>
+      <view class="form-item">
         <button class="form-button" type="primary" form-type="submit">创建</button>
       </view>
       <view class="form-item tip">
