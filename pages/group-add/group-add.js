@@ -1,10 +1,25 @@
 const app = new getApp()
 
 Page({
+  data: {
+    publicArray: [
+      {
+        id: 0,
+        name: "仅自己可见"
+      },
+      {
+        id: 2,
+        name: "互联网可见"
+      }
+    ],
+    seletedPublicText: "仅自己可见",
+    seletedPublic: 0
+  },
+
   // 提交表单
   formSubmit(e) {
-    const { name, description } = e.detail.value
-    const nameTrim = name.trim()
+    const formData = e.detail.value
+    const nameTrim = formData.name.trim()
 
     if (nameTrim === '') {
       wx.showToast({
@@ -15,7 +30,7 @@ Page({
     } else {
       this.handleCreateGroup({
         name: nameTrim,
-        description: description.trim(),
+        ...formData,
       })
     }
   },
@@ -26,6 +41,7 @@ Page({
       key: 'userInfo',
       success: res => {
         const userInfo = res.data
+        console.log(this.data)
 
         if (userInfo && userInfo.id) {
           app.globalData.$api({
@@ -33,7 +49,7 @@ Page({
             method: 'post',
             data: {
               ...dataObj,
-              login: userInfo.login
+              public: this.data.seletedPublic
             },
             success({ data }) {
               if (data.code === "validation") {
@@ -41,6 +57,17 @@ Page({
                   title: data.message,
                   icon: 'none',
                   duration: 2000
+                })
+              } else {
+                wx.showToast({
+                  title: '创建团队成功',
+                  icon: 'success',
+                  duration: 2000,
+                  success: () => {
+                    wx.redirectTo({
+                      url: '/pages/group/group'
+                    })
+                  }
                 })
               }
             }

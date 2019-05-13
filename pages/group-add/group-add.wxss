@@ -11,7 +11,7 @@
 }
 
 .container .core-view  .title {
-  margin-bottom: 42rpx;
+  margin-bottom: 68rpx;
   font-size: 40rpx;
   text-align: center;
 }
@@ -19,20 +19,6 @@
 .container .core-view .form-item {
   margin-bottom: 28rpx;
   width: 100%;
-}
-
-.form-item.form-buttons {
-  display: flex;
-  margin-bottom: 0;
-}
-
-.form-buttons .form-button {
-  font-size: 28rpx;
-  width: 50%;
-}
-
-.form-buttons .form-button:not(:last-of-type) {
-  margin-right: 28rpx;
 }
 
 .form-item.tip {
@@ -48,4 +34,26 @@
   border-radius: 4px; 
   color: #52d38a;
   font-size: 20rpx;
+}
+
+.compact-view {
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+}
+
+.compact-view .compact-view-prefix {
+  padding: 0 20rpx;
+  white-space: nowrap;
+  background-color: #eee;
+  color: #8c8c8c;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-right: 1px solid #d9d9d9;
+}
+
+.compact-view .compact-view-input {
+  padding-left: 20rpx;
 }
