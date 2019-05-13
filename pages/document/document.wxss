@@ -7,7 +7,8 @@
 }
 
 .container .core-view {
-  margin: 40rpx auto 0;
+  padding-top: 40rpx;
+  margin: 0 auto;
   width: 86%;
 }
 

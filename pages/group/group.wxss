@@ -6,7 +6,8 @@
 }
 
 .container .core-view {
-  margin: 40rpx auto 0;
+  padding-top: 40rpx;
+  margin: 0 auto;
   width: 90%;
 }
 
@@ -30,13 +31,12 @@
 }
 
 .view-content .group-view {
-
+  padding-bottom: 40rpx;
 }
 
 .view-content .group-view .group-box {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40rpx;
 }
 
 .group-box .group-icon {
