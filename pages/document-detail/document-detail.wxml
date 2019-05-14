@@ -11,14 +11,14 @@
           </picker>
         </view>
         <view class="doc-btns">
-          <view class="save-btn larkicon larkicon-save"></view>
-          <view class="larkicon larkicon-exclamation-circle"></view>
+          <view bindtap="handleSaveEvent" class="save-btn larkicon larkicon-save"></view>
+          <view bindtap="handleSendEvent" class="larkicon larkicon-exclamation-circle"></view>
         </view>
       </view>
     </view>
     <view class="doc-editor">
-      <input class="doc-title" placeholder="标题" />
-      <textarea class="doc-area" placeholder="在这里进行书写 ✍️" auto-focus maxlength="{{-1}}" />
+      <input class="doc-title" placeholder="标题" bindblur="handleTitleBlur" />
+      <textarea class="doc-area" placeholder="在这里进行书写 ✍️" auto-focus maxlength="{{-1}}" bindblur="handleTextAreaBlur" />
     </view>
   </view>
 </view>

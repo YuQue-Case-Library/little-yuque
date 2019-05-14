@@ -1,9 +1,16 @@
+const { gethashcode } = require('../../static/utils/util')
+
 const app = new getApp();
 
 Page({
   data: {
     repos: [],
-    selectedRepoIndex: 0
+    selectedRepoIndex: 0,
+    repoInfo: {
+      id: '',
+      title: '',
+      body: ''
+    }
   },
 
   onReady: function() {
@@ -47,4 +54,73 @@ Page({
       selectedRepoIndex: e.detail.value
     })
   },
+
+  handleSaveEvent() {
+
+  },
+
+  handleSendEvent() {
+    setTimeout(() => {
+      console.log(this.data)
+      this.handleSendAction()
+    }, 500)
+  },
+
+  handleSendAction() {
+    const { repoInfo: { id, title, body }, selectedRepoIndex, repos } = this.data
+    const currentRepo = repos[selectedRepoIndex]
+
+    app.globalData.$api({
+      url: `/repos/${currentRepo.namespace}/docs${id ? `\/${id}` : ''}`,
+      method: id ? 'put' : 'post',
+      data: {
+        title,
+        body,
+        slug: gethashcode(),
+        public: currentRepo.public,
+        format: 'markdown',
+      },
+      success: ({ data }) => {
+        if (data.code === "validation") {
+          wx.showToast({
+            title: data.message,
+            icon: "none",
+            duration: 2000
+          });
+        } else if (Array.isArray(data.data)) {
+          wx.showToast({
+            title: `${id ? '更新文档成功' : '创建文档成功'}`,
+            icon: "success",
+            duration: 2000
+          });
+        }
+      }
+    });
+  },
+
+  handleTitleBlur(event) {
+    const { value } = event.detail
+    const { repoInfo } = this.data
+    if (value !== repoInfo.title) {
+      this.setData({
+        repoInfo: {
+          ...repoInfo,
+          title: value
+        }
+      })
+    }
+  },
+
+  handleTextAreaBlur(event) {
+    const { value } = event.detail
+    const { repoInfo } = this.data
+    if (value !== repoInfo.body) {
+      this.setData({
+        repoInfo: {
+          ...repoInfo,
+          body: value
+        }
+      })
+    }
+  }
 });
