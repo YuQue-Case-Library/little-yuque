@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="core-view">
+    <view class="head-view">
+      <view class="head-box">
+        <view>
+          <picker bindchange="handleRepoPick" value="{{index}}" range-key="name" range="{{repos}}">
+            <view class="compact-view">
+              <text>归属：</text>
+              <text>{{repos[selectedRepoIndex].name}}</text>
+            </view>
+          </picker>
+        </view>
+        <view class="doc-btns">
+          <view class="save-btn larkicon larkicon-save"></view>
+          <view class="larkicon larkicon-exclamation-circle"></view>
+        </view>
+      </view>
+    </view>
+    <view class="doc-editor">
+      <input class="doc-title" placeholder="标题" />
+      <textarea class="doc-area" placeholder="在这里进行书写 ✍️" auto-focus maxlength="{{-1}}" />
+    </view>
+  </view>
+</view>
