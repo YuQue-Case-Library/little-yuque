@@ -29,7 +29,7 @@
         </view>
       </view>
       <view class="form-item">
-        <picker bindchange="handleGroupPick" value="{{index}}" range-key="name" range="{{ownGroups}}">
+        <picker bindchange="handleGroupPick" value="{{index}}" range-key="name" range="{{ownerGroups}}">
           <view class="compact-view">
             <view class="compact-view-prefix">归属</view>
             <input class="compact-view-input" value="{{ownerGroups[selectedGroupIndex].name}}" disabled placeholder="请选择知识库归属"/>
