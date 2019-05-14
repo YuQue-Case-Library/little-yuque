@@ -6,7 +6,11 @@ Component({
     docs: []
   },
 
-  ready() {
-    
+  methods: {
+    toCreateDoc() {
+      wx.navigateTo({
+        url: '/pages/document-detail/document-detail',
+      })
+    }
   }
 })
