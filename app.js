@@ -1,4 +1,5 @@
 //app.js
+const Towxml = require('/towxml/main'); 
 const $api = require('/static/utils/api');
 
 App({
@@ -39,4 +40,5 @@ App({
     userInfo: null,
     $api: $api
   },
+  towxml: new Towxml()
 })
