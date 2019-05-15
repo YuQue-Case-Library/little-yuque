@@ -47,7 +47,7 @@ Page({
       repoId: this.data.repoInfo.id
     });
     wx.navigateTo({
-      url: `/pages/document-detail/document-detail?data=${extraData}`
+      url: `/pages/document/detail/index?data=${extraData}`
     });
   }
 })

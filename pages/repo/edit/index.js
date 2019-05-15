@@ -151,7 +151,7 @@ Page({
                   duration: 2000,
                   success: () => {
                     wx.redirectTo({
-                      url: '/pages/repo-list/index'
+                      url: '/pages/repo/list/index'
                     })
                   }
                 })

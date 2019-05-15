@@ -1,6 +1,5 @@
 Page({
   data:{
-    groupId: '',
     tabActive: 0,
     tabData: [
       {
@@ -37,12 +36,4 @@ Page({
       tabActive: currentActive
     })
   },
-
-  // 团队
-  changeGroup(e) {
-    console.log(e.detail.groupId)
-    this.setData({
-      groupId: e.detail.groupId
-    })
-  }
 })

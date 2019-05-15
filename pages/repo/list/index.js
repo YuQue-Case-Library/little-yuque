@@ -49,7 +49,7 @@ Component({
     // 创建知识库
     toCreateRepo() {
       wx.navigateTo({
-        url: "/pages/repository-add/repository-add"
+        url: "/pages/repo/edit/index"
       });
     },
 
@@ -63,7 +63,7 @@ Component({
         description: repoInfo.description,
       });
       wx.navigateTo({
-        url: `/pages/repository-detail/repository-detail?data=${extraData}`
+        url: `/pages/repo/detail/index?data=${extraData}`
       });
     }
   }

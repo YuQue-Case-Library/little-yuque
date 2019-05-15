@@ -43,23 +43,14 @@ Component({
     // 创建团队
     toCreateGroup() {
       wx.navigateTo({
-        url: '/pages/group-add/group-add'
+        url: '/pages/group/edit/index'
       })
     },
 
-    // 获取团队所有知识库
-    toGroupRepo(event) {
+    // 获取团队信息
+    toGroupDetail(event) {
       const { goup: goupInfo } = event.currentTarget.dataset;
-      const extraData = {
-        groupId: goupInfo.id,
-      }
       
-      wx.navigateTo({
-        url: `/pages/repo-list/index?data=${JSON.stringify(extraData)}`,
-        success: () => {
-          this.triggerEvent('changeGroup', extraData)
-        }
-      })
     }
   }
 })

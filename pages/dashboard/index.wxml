@@ -1,8 +1,8 @@
 <view class="container">
   <view class="tab-view">
     <document wx:if="{{tabActive === 0}}"></document>
-    <repository wx:if="{{tabActive === 1}}" groupId="{{groupId}}"></repository>
-    <group wx:if="{{tabActive === 2}}" bind:changeGroup="changeGroup"></group>
+    <repository wx:if="{{tabActive === 1}}"></repository>
+    <group wx:if="{{tabActive === 2}}"></group>
     <mine wx:if="{{tabActive === 3}}"></mine>
   </view>
   <view class="tabs">

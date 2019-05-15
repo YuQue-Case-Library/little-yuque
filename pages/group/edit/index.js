@@ -65,7 +65,7 @@ Page({
                   duration: 2000,
                   success: () => {
                     wx.redirectTo({
-                      url: '/pages/group/group'
+                      url: '/pages/group/list/index'
                     })
                   }
                 })
