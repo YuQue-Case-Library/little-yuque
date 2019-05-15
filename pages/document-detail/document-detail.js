@@ -10,7 +10,14 @@ Page({
       id: '',
       title: '',
       body: ''
-    }
+    },
+    params: {}
+  },
+
+  onLoad:function(options){
+    this.setData({
+      params: JSON.parse(options.data)
+    })
   },
 
   onReady: function() {
@@ -44,6 +51,25 @@ Page({
               }
             }
           });
+
+          const { params } = this.data
+
+          if (params.docId) {
+            app.globalData.$api({
+              url: `/repos/${params.repoId}/docs/${params.docId}`,
+              success: ({ data }) => {
+                if (data.code === "validation") {
+                  wx.showToast({
+                    title: data.message,
+                    icon: "none",
+                    duration: 2000
+                  });
+                } else if (data.data) {
+                  console.log(data)
+                }
+              }
+            });
+          }
         }
       }
     });

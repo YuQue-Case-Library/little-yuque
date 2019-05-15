@@ -10,6 +10,8 @@
           wx:for="{{columnList}}"
           wx:key="index"
           class="repo-item"
+          data-doc="{{item}}"
+          bindtap="toDocDetail"
         >
           <image mode="scaleToFill" class="repo-cover" src="{{item.cover ? item.cover : '/static/images/no_cover.png'}}" />
           <view class="repo-box">

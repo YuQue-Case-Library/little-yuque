@@ -5,7 +5,7 @@ Page({
     repoInfo: {},
     columnList: [],
     columnsNum: 0,
-    article: ''
+    article: '',
   },
   onLoad:function(options){
     this.setData({
@@ -40,4 +40,14 @@ Page({
       });
     }
   },
+  toDocDetail(event) {
+    const { doc: docInfo } = event.currentTarget.dataset;
+    const extraData = JSON.stringify({
+      docId: docInfo.id,
+      repoId: this.data.repoInfo.id
+    });
+    wx.navigateTo({
+      url: `/pages/document-detail/document-detail?data=${extraData}`
+    });
+  }
 })
