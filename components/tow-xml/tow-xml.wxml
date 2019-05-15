@@ -1,0 +1,4 @@
+<import src="/towxml/entry.wxml"/>
+<view class="container">
+  <template is="entry" data="{{...articleJson}}" />
+</view>

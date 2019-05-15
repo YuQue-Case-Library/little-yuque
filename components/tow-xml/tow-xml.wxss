@@ -1,0 +1,7 @@
+@import "/static/style/common.wxss";
+@import '/towxml/style/main.wxss';
+
+.container {
+  background: #F8F8F8;
+  width: 750rpx;
+}
