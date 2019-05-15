@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "no-data": "../../components/no-data/no-data"
+    "no-data": "../../components/no-data/no-data",
+    "tow-xml": "../../components/tow-xml/tow-xml"
   }
 }

@@ -2,26 +2,42 @@ const app = new getApp()
 
 Page({
   data:{
+    repoInfo: {},
+    columnList: [],
+    columnsNum: 0,
+    article: ''
   },
   onLoad:function(options){
-    // 生命周期函数--监听页面加载
+    this.setData({
+      repoInfo: JSON.parse(options.data)
+    })
   },
   onReady:function(){
-    
-  },
-  onShow:function(){
-    // 生命周期函数--监听页面显示
-  },
-  onHide:function(){
-    // 生命周期函数--监听页面隐藏
-  },
-  onUnload:function(){
-    // 生命周期函数--监听页面卸载
-  },
-  onPullDownRefresh: function() {
-    // 页面相关事件处理函数--监听用户下拉动作
-  },
-  onReachBottom: function() {
-    // 页面上拉触底事件的处理函数
+    const { id: repoId, type: repoType } = this.data.repoInfo
+
+    if (repoType === 'Book') {
+      app.globalData.$api({
+        url: `/repos/${repoId}`,
+        success: ({ data: resData }) => {
+          if (resData && resData.data.toc) {
+            this.setData({
+              article: resData.data.toc
+            });
+          }
+        }
+      });
+    } else {
+      app.globalData.$api({
+        url: `/repos/${repoId}/docs`,
+        success: ({ data: resData }) => {
+          if (resData && Array.isArray(resData.data)) {
+            this.setData({
+              columnsNum: resData.data.length,
+              columnList: resData.data
+            });
+          }
+        }
+      });
+    }
   },
 })

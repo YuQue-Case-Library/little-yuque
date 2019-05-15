@@ -4,20 +4,23 @@
       <text class="has-group">已有知识库：<text>{{repositoryNum < 0 ? 0 : repositoryNum}}</text></text>
       <button class="add-group" type="primary" bindtap="toCreateRepo">新建知识库</button>
     </view>
-    <view
-      class="repository-box"
-      wx:if="{{repositoryNum > 0}}"
-      wx:for="{{repositories}}"
-      wx:key="index"
-    >
-      <image class="repository-bg" src="/static/images/sWiZyNKIDyiSrxV.png" />
-      <view class="repository-header">
-        <text class="title">{{item.name}}</text>
-        <view class="count">{{item.items_count}}</view>
-      </view>
-      <view class="repository-footer">
-        <view class="desc ellipsis">{{item.description}}</view>
-        <view class="belong ellipsis">{{item.namespace}}</view>
+    <view wx:if="{{repositoryNum > 0}}">
+      <view
+        wx:for="{{repositories}}"
+        wx:key="index"
+        data-repo="{{item}}"
+        class="repository-box"
+        bindtap="toRepoDetail"
+      >
+        <image class="repository-bg" src="/static/images/sWiZyNKIDyiSrxV.png" />
+        <view class="repository-header">
+          <text class="title">{{item.name}}</text>
+          <view class="count">{{item.items_count}}</view>
+        </view>
+        <view class="repository-footer">
+          <view class="desc ellipsis">{{item.description}}</view>
+          <view class="belong ellipsis">{{item.namespace}}</view>
+        </view>
       </view>
     </view>
     <view  wx:if="{{repositoryNum === 0}}">

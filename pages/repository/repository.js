@@ -1,4 +1,4 @@
-const app = new getApp()
+const app = new getApp();
 
 Component({
   data: {
@@ -8,9 +8,9 @@ Component({
 
   ready() {
     wx.getStorage({
-      key: 'userInfo',
+      key: "userInfo",
       success: res => {
-        const userInfo = res.data
+        const userInfo = res.data;
 
         if (userInfo && userInfo.id) {
           app.globalData.$api({
@@ -20,24 +20,35 @@ Component({
                 this.setData({
                   repositoryNum: resData.data.length,
                   repositories: resData.data
-                })
+                });
               }
             }
-          })
+          });
         }
       }
-    })
+    });
   },
 
   methods: {
-    _filterBelong(item) {
-      console.log(item)
-      return item.namespace
-    },
+    // 创建知识库
     toCreateRepo() {
       wx.navigateTo({
-        url: '/pages/repository-add/repository-add'
-      })
+        url: "/pages/repository-add/repository-add"
+      });
+    },
+
+    // 查看知识库详情
+    toRepoDetail(event) {
+      const { repo: repoInfo } = event.currentTarget.dataset;
+      const extraData = JSON.stringify({
+        id: repoInfo.id,
+        type: repoInfo.type,
+        name: repoInfo.name,
+        description: repoInfo.description,
+      });
+      wx.navigateTo({
+        url: `/pages/repository-detail/repository-detail?data=${extraData}`
+      });
     }
   }
-})
+});

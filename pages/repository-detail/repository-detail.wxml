@@ -1,28 +1,39 @@
 <view class="container">
   <view class="core-view">
-    <view class="title">创建知识库</view>
-    <form bindsubmit="formSubmit" bindreset="formReset">
-      <view class="form-item">
-        <input name="name" class="input" placeholder="知识库名称"/>
-      </view>
-      <view class="form-item">
-        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-          <view class="picker">
-            选择类型：{{array[index]}}
+    <view class="title {{repoInfo.type === 'Book' ? 'book-title' : ''}}">
+      <view class="title-repo">{{repoInfo.name}}</view>
+      <view class="title-introduction">{{repoInfo.description}}</view>
+    </view>
+    <view class="repo-view" wx:if="{{repoInfo.type === 'Column'}}">
+      <view wx:if="{{columnsNum > 0}}">
+        <view
+          wx:for="{{columnList}}"
+          wx:key="index"
+          class="repo-item"
+        >
+          <image mode="scaleToFill" class="repo-cover" src="{{item.cover ? item.cover : '/static/images/no_cover.png'}}" />
+          <view class="repo-box">
+            <view class="repo-title">{{item.title}}</view>
+            <view class="repo-introduction">{{item.description}}</view>
+            <view class="repo-info">
+              <text class="repo-author">{{item.last_editor.name}}</text>
+              <text> · </text>
+              <text>{{item.updated_at}}</text>
+            </view>
           </view>
-        </picker>
+        </view>
       </view>
-      <view class="form-item">
-        <input name="description" class="input"placeholder="知识库简介"/>
+      <view wx:else class="no_book_wrapper">
+        <image class="no_book_icon" src="/static/images/original.png" />
       </view>
-      <view class="form-item form-buttons">
-        <button class="form-button" form-type="reset">重置</button>
-        <button class="form-button" type="primary" form-type="submit">创建</button>
+    </view>
+    <view class="repo-view" wx:if="{{repoInfo.type === 'Book'}}">
+      <view wx:if="{{article}}">
+        <tow-xml article="{{article}}"></tow-xml>
       </view>
-      <view class="form-item tip">
-        <text class="icon">温馨提示</text>
-        <text>目前小程序暂未支持团队头像上传</text>
+      <view wx:else class="no_book_wrapper">
+        <image class="no_book_icon" src="/static/images/original.png" />
       </view>
-    </form>
+    </view>
   </view>
 </view>
