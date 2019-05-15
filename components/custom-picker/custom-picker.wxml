@@ -1,0 +1,16 @@
+<picker
+  mode="{{mode}}"
+  range="{{range}}"
+  range-key="{{rangeKey}}"
+  value="{{index}}"
+  bindchange="handleTypePick"
+>
+  <view class="picker">
+    <input
+      value="{{seletedTypeText}}"
+      disabled 
+      placeholder="请选择知识库类型"
+      class="input"
+    />
+  </view>
+</picker>

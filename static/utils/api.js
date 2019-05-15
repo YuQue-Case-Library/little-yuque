@@ -38,6 +38,7 @@ const $api = apiParams => {
       })
     },
     complete({ data: { status } }) {
+      wx.hideLoading()
       const responseMsg = response_code_msg[status]
 
       if(typeof responseMsg !== 'undefined') {

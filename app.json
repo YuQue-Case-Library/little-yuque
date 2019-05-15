@@ -1,16 +1,26 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/dashboard/index",
+    "pages/document/board/index",
+    "pages/document/detail/index",
+    "pages/repo/list/index",
+    "pages/repo/edit/index",
+    "pages/repo/detail/index",
+    "pages/group/list/index",
+    "pages/group/edit/index",
+    "pages/group/detail/index",
+    "pages/mine/index",
+    "pages/changelog/index",
+    "pages/aboutapp/index",
+    "pages/aboutme/index",
     "pages/login/login",
-    "pages/register/register",
-    "pages/license/license",
-    "pages/dashboard/dashboard",
+    "pages/index1/index",
     "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "语雀 smart",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"

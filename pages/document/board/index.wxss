@@ -1,0 +1,41 @@
+
+@import "/static/style/common.wxss";
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  box-shadow: 0 0 10px rgba(0,21,41,.08) inset;
+}
+
+.container .core-view {
+  padding-top: 40rpx;
+  margin: 0 auto;
+  width: 86%;
+}
+
+.core-view .title {
+  display: flex;
+  align-items: center;
+}
+
+.title .title-icon {
+  margin-right: 16rpx;
+  color: #1890ff;
+  font-size: 32rpx;
+}
+
+.container .core-view .create-doc {
+  margin: 36rpx auto 0;
+  box-sizing: border-box;
+  height: 200rpx;
+  line-height: 200rpx;
+  text-align: center;
+  border: 2px solid #25b864;
+  border-radius: 6px; 
+  box-shadow: 0 0px 10px #b9f0d167 inset;
+}
+
+.create-doc .create-icon{
+  color: #1d9752;
+  font-weight: 600;
+}

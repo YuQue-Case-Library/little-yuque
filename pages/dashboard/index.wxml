@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="tab-view">
+    <document wx:if="{{tabActive === 0}}"></document>
+    <repository wx:if="{{tabActive === 1}}" groupId="{{groupId}}"></repository>
+    <group wx:if="{{tabActive === 2}}" bind:changeGroup="changeGroup"></group>
+    <mine wx:if="{{tabActive === 3}}"></mine>
+  </view>
+  <view class="tabs">
+    <view
+      wx:for="{{tabData}}"
+      wx:key="index"
+      class="tab {{tabActive === index ? 'current' : ''}}"
+      data-index="{{index}}"
+      bindtap="handleChangeTab"
+    >
+      <text class="larkicon larkicon-{{item.icon}}"></text>
+      <text>{{item.text}}</text>
+    </view>
+  </view>
+</view>

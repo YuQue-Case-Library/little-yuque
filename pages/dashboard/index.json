@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "document": "../document/board/index",
+    "repository": "../repo/list/index",
+    "group": "../group/list/index",
+    "mine": "../mine/index"
+  }
+}

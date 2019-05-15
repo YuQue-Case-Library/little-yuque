@@ -1,8 +1,0 @@
-{
-  "usingComponents": {
-    "document": "../document/document",
-    "repository": "../repository/repository",
-    "group": "../group/group",
-    "me": "../me/me"
-  }
-}

@@ -1,0 +1,12 @@
+<view class="tabbar">
+  <view
+    wx:for="{{tabData}}"
+    wx:key="index"
+    class="tab {{tabActive === index ? 'current' : ''}}"
+    data-index="{{index}}"
+    bindtap="handleChangeTab"
+  >
+    <text class="larkicon larkicon-{{item.icon}}"></text>
+    <text>{{item.text}}</text>
+  </view>
+</view>

@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="core-view">
+    <view class="view-header">
+      <text class="has-group">已参与团队：<text>{{groupNum < 0 ? 0 : groupNum}}</text></text>
+      <button class="add-group" type="primary" bindtap="toCreateGroup">新建团队</button>
+    </view>
+    <view class="view-content">
+      <view class="group-view" wx:if="{{groupNum > 0}}" wx:for="{{groups}}" wx:key="index" data-goup="{{item}}" bindtap="toGroupRepo">
+        <view class="group-box">
+          <image class="group-icon" src="{{item.avatar_url}}"/>
+          <view class="group-info-box">
+            <view class="group-info">
+              <text class="group-name">{{item.name}}</text>
+              <text class="group-desc ellipsis">{{item.description}}</text>
+            </view>
+            <text class="group-link larkicon larkicon-arrow-right"></text>
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{groupNum === 0}}">
+        <empty title="暂未加入任何团队"></empty>
+      </view>
+    </view>
+  </view>
+</view>

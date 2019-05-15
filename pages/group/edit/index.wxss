@@ -1,0 +1,60 @@
+
+@import "/static/style/common.wxss";
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container .core-view {
+  margin: 40rpx auto 0;
+  width: 90%;
+}
+
+.container .core-view  .title {
+  margin-bottom: 68rpx;
+  font-size: 40rpx;
+  text-align: center;
+}
+
+.container .core-view .form-item {
+  margin-bottom: 28rpx;
+  width: 100%;
+}
+
+.form-item.tip {
+  text-align: center;
+  color: #8c8c8c;
+  font-size: 26rpx;
+}
+
+.form-item.tip .icon {
+  margin-right: 20rpx;
+  padding: 6rpx 10rpx;
+  background-color: #eee;
+  border-radius: 4px; 
+  color: #52d38a;
+  font-size: 20rpx;
+}
+
+.compact-view {
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+}
+
+.compact-view .compact-view-prefix {
+  padding: 0 20rpx;
+  white-space: nowrap;
+  background-color: #eee;
+  color: #8c8c8c;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-right: 1px solid #d9d9d9;
+}
+
+.compact-view .compact-view-input {
+  padding-left: 20rpx;
+}

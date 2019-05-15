@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "tow-xml": "../../components/tow-xml/index"
+  }
+}

@@ -1,0 +1,88 @@
+@import "/static/style/common.wxss";
+@import "/static/style/DIN-Medium.wxss";
+
+.container {
+  margin-bottom: 106rpx;
+  clear: both;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.container .core-view {
+  margin: 40rpx auto 0;
+  width: 100%;
+}
+
+.core-view .view-header {
+  padding: 0 4% 48rpx 4%;
+  display: flex;
+  align-items: center;
+}
+
+.core-view .view-header .has-group {
+  flex: 1;
+  font-size: 32rpx;
+}
+
+.core-view .view-header .add-group {
+  width: 200rpx;
+  font-size: 24rpx;
+}
+
+.repository-box {
+  position: relative;
+  float: left;
+  margin: 0 0 32rpx 4%;
+  padding: 20rpx;
+  box-sizing: border-box;
+  border: 1px solid #eee;
+  border-radius: 6px; 
+  width: 44%;
+  height: 320rpx;
+  background-color: #fff;
+  box-shadow: 0 0px 10px rgba(0,21,41,.08);
+}
+
+.repository-box .repository-bg {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 118rpx;
+  height: 148rpx;
+}
+
+.repository-box .repository-header {
+  position: relative;
+}
+
+.repository-box .repository-header .count {
+  position: absolute;
+  top: 78rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 116rpx;
+  font-family: 'DIN';
+  color: #096dd9;
+}
+
+.repository-box .repository-header .title {
+  font-size: 34rpx;
+}
+
+.repository-box .repository-footer {
+  position: absolute;
+  bottom: 20rpx;
+}
+
+.repository-box .repository-footer .desc {
+  max-width: 280rpx;
+}
+
+
+.repository-box .repository-footer .belong {
+  max-width: 280rpx;
+  color: #8c8c8c;
+}
