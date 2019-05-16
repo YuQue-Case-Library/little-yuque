@@ -15,8 +15,15 @@ Page({
   },
 
   onLoad:function(options){
+    let parseData = {}
+
+    try {
+      parseData = JSON.parse(options.data)
+    } catch (error) {
+    }
+    
     this.setData({
-      params: JSON.parse(options.data)
+      params: parseData
     })
   },
 
@@ -42,7 +49,7 @@ Page({
                     if (repo.public === 0) {
                       return {
                         ...repo,
-                        name: `🔐 ${repo.name}`
+                        name: `${repo.name} 🔒`
                       }
                     }
                     return repo

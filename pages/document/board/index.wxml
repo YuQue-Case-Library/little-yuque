@@ -8,5 +8,4 @@
       <text class="larkicon larkicon-add create-icon"></text>
     </view>
   </view>
-  <tabbar tabIndex="{{0}}" />
 </view>

@@ -5,7 +5,7 @@
       <button class="add-group" type="primary" bindtap="toCreateGroup">新建团队</button>
     </view>
     <view class="view-content">
-      <view class="group-view" wx:if="{{groupNum > 0}}" wx:for="{{groups}}" wx:key="index" data-goup="{{item}}" bindtap="toGroupDetail">
+      <view class="group-view" wx:if="{{groupNum > 0}}" wx:for="{{groups}}" wx:key="index" data-group="{{item}}" bindtap="toGroupDetail">
         <view class="group-box">
           <image class="group-icon" src="{{item.avatar_url}}"/>
           <view class="group-info-box">

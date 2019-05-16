@@ -1,21 +1,21 @@
-const app = new getApp()
+const app = new getApp();
 
 Page({
-  data:{
+  data: {
     repoInfo: {},
     columnList: [],
     columnsNum: 0,
-    article: '',
+    article: ""
   },
-  onLoad:function(options){
+  onLoad: function(options) {
     this.setData({
       repoInfo: JSON.parse(options.data)
-    })
+    });
   },
-  onReady:function(){
-    const { id: repoId, type: repoType } = this.data.repoInfo
+  onReady: function() {
+    const { id: repoId, type: repoType } = this.data.repoInfo;
 
-    if (repoType === 'Book') {
+    if (repoType === "Book") {
       app.globalData.$api({
         url: `/repos/${repoId}`,
         success: ({ data: resData }) => {
@@ -50,4 +50,4 @@ Page({
       url: `/pages/document/detail/index?data=${extraData}`
     });
   }
-})
+});

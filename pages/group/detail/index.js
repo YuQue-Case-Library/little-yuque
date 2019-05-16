@@ -1,11 +1,46 @@
+const app = new getApp()
+
 Page({
   data:{
+    groupInfo: {}
   },
   onLoad:function(options){
-    // 生命周期函数--监听页面加载
+    let parseData = {}
+    try {
+      parseData = JSON.parse(options.data)
+    } catch (error) {
+      
+    }
+    this.setData({
+      groupInfo: parseData
+    })
   },
   onReady:function(){
-    // 生命周期函数--监听页面初次渲染完成
+    const { groupId } = this.data.groupInfo
+    wx.showLoading()
+
+    // 获取团队所有知识库
+    app.globalData.$api({
+      url: `/groups/${groupId}/repos`,
+      success: ({ data: resData }) => {
+        console.log(resData)
+      }
+    })
+
+    // 获取团队成员信息
+    app.globalData.$api({
+      url: `/groups/${groupId}/users`,
+      success: ({ data: resData }) => {
+        console.log(resData)
+      }
+    })
+
+    app.globalData.$api({
+      url: `/groups`,
+      success: ({ data: resData }) => {
+        console.log(resData)
+      }
+    })
   },
   onShow:function(){
     // 生命周期函数--监听页面显示
@@ -29,5 +64,5 @@ Page({
       desc: 'desc', // 分享描述
       path: 'path' // 分享路径
     }
-  }
+  },
 })

@@ -49,8 +49,15 @@ Component({
 
     // 获取团队信息
     toGroupDetail(event) {
-      const { goup: goupInfo } = event.currentTarget.dataset;
-      
+      const { group } = event.currentTarget.dataset;
+      const extraData = JSON.stringify({
+        groupId: group.id,
+        groupName: group.name,
+        groupDesc: group.description
+      })
+      wx.navigateTo({
+        url: `/pages/group/detail/index?data=${extraData}`
+      })
     }
   }
 })
